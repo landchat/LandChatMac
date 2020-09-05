@@ -27,7 +27,7 @@
 		182769B725031EDC00711684 /* LCViewController+NSTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LCViewController+NSTableView.swift"; sourceTree = "<group>"; };
 		182769B92503665400711684 /* LCViewController+SendMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LCViewController+SendMessage.swift"; sourceTree = "<group>"; };
 		182769BB250375B800711684 /* LCViewController+ChattingHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LCViewController+ChattingHistory.swift"; sourceTree = "<group>"; };
-		182769BD2503814D00711684 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = LandChat/README.md; sourceTree = "<group>"; };
+		182769BD2503814D00711684 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
