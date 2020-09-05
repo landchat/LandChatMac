@@ -11,6 +11,7 @@
 		182769AA250319C400711684 /* LCViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769A9250319C400711684 /* LCViewController.swift */; };
 		182769AC250319C400711684 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 182769AB250319C400711684 /* Assets.xcassets */; };
 		182769AF250319C400711684 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 182769AD250319C400711684 /* Main.storyboard */; };
+		182769B825031EDC00711684 /* LCViewController+NSTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769B725031EDC00711684 /* LCViewController+NSTableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +22,7 @@
 		182769AE250319C400711684 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		182769B0250319C400711684 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		182769B1250319C400711684 /* LandChat.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LandChat.entitlements; sourceTree = "<group>"; };
+		182769B725031EDC00711684 /* LCViewController+NSTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LCViewController+NSTableView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +57,7 @@
 			children = (
 				182769A7250319C400711684 /* LCAppDelegate.swift */,
 				182769A9250319C400711684 /* LCViewController.swift */,
+				182769B725031EDC00711684 /* LCViewController+NSTableView.swift */,
 				182769AB250319C400711684 /* Assets.xcassets */,
 				182769AD250319C400711684 /* Main.storyboard */,
 				182769B0250319C400711684 /* Info.plist */,
@@ -135,6 +138,7 @@
 			files = (
 				182769AA250319C400711684 /* LCViewController.swift in Sources */,
 				182769A8250319C400711684 /* LCAppDelegate.swift in Sources */,
+				182769B825031EDC00711684 /* LCViewController+NSTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
