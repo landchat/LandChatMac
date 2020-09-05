@@ -12,6 +12,7 @@ class LCViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var senderTextView: NSTextView!
     @IBOutlet weak var sendToWhich: NSTextField!
+    @IBOutlet weak var chattingHistory: NSTextView!
     
     
     static let path = FileManager().urls(for: .libraryDirectory, in: .userDomainMask).first!.appendingPathComponent("LandChat").appendingPathComponent("Recent")

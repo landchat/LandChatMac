@@ -14,6 +14,15 @@ class LCAppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
+        
+        let url = FileManager().urls(for: .libraryDirectory, in: .userDomainMask).first!.appendingPathComponent("LandChat")
+        if !FileManager.default.fileExists(atPath: url.path) {
+            do {
+                try FileManager().createDirectory(at: url, withIntermediateDirectories: true, attributes: nil)
+            } catch {
+                
+            }
+        }
         // Insert code here to initialize your application
     }
 

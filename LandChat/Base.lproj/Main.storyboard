@@ -796,6 +796,7 @@
                                                 </tableColumn>
                                             </tableColumns>
                                             <connections>
+                                                <action selector="didClickTableView:" target="XfG-lQ-9wD" id="zIq-fA-lvE"/>
                                                 <outlet property="dataSource" destination="XfG-lQ-9wD" id="eKl-wg-y9H"/>
                                                 <outlet property="delegate" destination="XfG-lQ-9wD" id="cof-2h-pvL"/>
                                             </connections>
@@ -818,9 +819,52 @@
                             <splitView arrangesAllSubviews="NO" dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="HHM-ac-zWP">
                                 <rect key="frame" x="271" y="0.0" width="329" height="450"/>
                                 <subviews>
-                                    <customView fixedFrame="YES" id="OY5-27-nqi">
+                                    <customView id="OY5-27-nqi">
                                         <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
                                         <autoresizingMask key="autoresizingMask"/>
+                                        <subviews>
+                                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SNh-Bd-SD5">
+                                                <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
+                                                <clipView key="contentView" drawsBackground="NO" id="KZj-xu-A9R">
+                                                    <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
+                                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                    <subviews>
+                                                        <textView drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="apO-5s-flY">
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
+                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                            <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                            <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                            <size key="minSize" width="329" height="331"/>
+                                                            <size key="maxSize" width="329" height="10000000"/>
+                                                            <attributedString key="textStorage">
+                                                                <fragment content="Chatting History">
+                                                                    <attributes>
+                                                                        <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                                        <font key="NSFont" metaFont="systemLight" size="16"/>
+                                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                                    </attributes>
+                                                                </fragment>
+                                                            </attributedString>
+                                                            <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                                        </textView>
+                                                    </subviews>
+                                                </clipView>
+                                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="H4h-UM-7Vl">
+                                                    <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                                <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="AaY-yu-vVs">
+                                                    <rect key="frame" x="313" y="0.0" width="16" height="331"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                </scroller>
+                                            </scrollView>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="SNh-Bd-SD5" secondAttribute="bottom" id="XHL-98-GcV"/>
+                                            <constraint firstItem="SNh-Bd-SD5" firstAttribute="top" secondItem="OY5-27-nqi" secondAttribute="top" id="aUs-7q-yqo"/>
+                                            <constraint firstItem="SNh-Bd-SD5" firstAttribute="leading" secondItem="OY5-27-nqi" secondAttribute="leading" id="fpU-Zw-Pce"/>
+                                            <constraint firstAttribute="trailing" secondItem="SNh-Bd-SD5" secondAttribute="trailing" id="fvw-uk-cTS"/>
+                                        </constraints>
                                     </customView>
                                     <customView id="KMx-ab-Wjh">
                                         <rect key="frame" x="0.0" y="332" width="329" height="118"/>
@@ -914,6 +958,7 @@ DQ
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="chattingHistory" destination="apO-5s-flY" id="SJJ-9F-Wqq"/>
                         <outlet property="sendToWhich" destination="C2l-Wh-h6r" id="sq8-ov-PJn"/>
                         <outlet property="senderTextView" destination="Qrp-35-kQH" id="X9R-iF-9Wx"/>
                         <outlet property="tableView" destination="Kl1-pa-pJx" id="zp5-Ik-8fr"/>
