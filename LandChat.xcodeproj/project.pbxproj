@@ -14,6 +14,10 @@
 		182769B825031EDC00711684 /* LCViewController+NSTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769B725031EDC00711684 /* LCViewController+NSTableView.swift */; };
 		182769BA2503665400711684 /* LCViewController+SendMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769B92503665400711684 /* LCViewController+SendMessage.swift */; };
 		182769BC250375B800711684 /* LCViewController+ChattingHistory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769BB250375B800711684 /* LCViewController+ChattingHistory.swift */; };
+		182769BF2504A21A00711684 /* LCLandChatUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769BE2504A21A00711684 /* LCLandChatUser.swift */; };
+		182769C32504AA6200711684 /* LCViewController+LeftSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769C22504AA6200711684 /* LCViewController+LeftSidebar.swift */; };
+		182769C62504B4A000711684 /* LCUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769C52504B4A000711684 /* LCUserViewController.swift */; };
+		182769CA2504B9FB00711684 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769C92504B9FB00711684 /* NSImage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +32,10 @@
 		182769B92503665400711684 /* LCViewController+SendMessage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LCViewController+SendMessage.swift"; sourceTree = "<group>"; };
 		182769BB250375B800711684 /* LCViewController+ChattingHistory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LCViewController+ChattingHistory.swift"; sourceTree = "<group>"; };
 		182769BD2503814D00711684 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		182769BE2504A21A00711684 /* LCLandChatUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCLandChatUser.swift; sourceTree = "<group>"; };
+		182769C22504AA6200711684 /* LCViewController+LeftSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LCViewController+LeftSidebar.swift"; sourceTree = "<group>"; };
+		182769C52504B4A000711684 /* LCUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCUserViewController.swift; sourceTree = "<group>"; };
+		182769C92504B9FB00711684 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,17 +69,53 @@
 		182769A6250319C400711684 /* LandChat */ = {
 			isa = PBXGroup;
 			children = (
-				182769A7250319C400711684 /* LCAppDelegate.swift */,
-				182769A9250319C400711684 /* LCViewController.swift */,
-				182769B725031EDC00711684 /* LCViewController+NSTableView.swift */,
-				182769B92503665400711684 /* LCViewController+SendMessage.swift */,
-				182769BB250375B800711684 /* LCViewController+ChattingHistory.swift */,
+				182769C82504B9EE00711684 /* Utilities */,
+				182769C42504B45F00711684 /* Classes */,
 				182769AB250319C400711684 /* Assets.xcassets */,
 				182769AD250319C400711684 /* Main.storyboard */,
 				182769B0250319C400711684 /* Info.plist */,
 				182769B1250319C400711684 /* LandChat.entitlements */,
 			);
 			path = LandChat;
+			sourceTree = "<group>";
+		};
+		182769C12504A42100711684 /* Main View Controller */ = {
+			isa = PBXGroup;
+			children = (
+				182769A9250319C400711684 /* LCViewController.swift */,
+				182769B725031EDC00711684 /* LCViewController+NSTableView.swift */,
+				182769C22504AA6200711684 /* LCViewController+LeftSidebar.swift */,
+				182769B92503665400711684 /* LCViewController+SendMessage.swift */,
+				182769BB250375B800711684 /* LCViewController+ChattingHistory.swift */,
+			);
+			path = "Main View Controller";
+			sourceTree = "<group>";
+		};
+		182769C42504B45F00711684 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				182769A7250319C400711684 /* LCAppDelegate.swift */,
+				182769C72504B81600711684 /* User */,
+				182769C12504A42100711684 /* Main View Controller */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		182769C72504B81600711684 /* User */ = {
+			isa = PBXGroup;
+			children = (
+				182769C52504B4A000711684 /* LCUserViewController.swift */,
+				182769BE2504A21A00711684 /* LCLandChatUser.swift */,
+			);
+			path = User;
+			sourceTree = "<group>";
+		};
+		182769C82504B9EE00711684 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				182769C92504B9FB00711684 /* NSImage.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -146,8 +190,12 @@
 			files = (
 				182769BC250375B800711684 /* LCViewController+ChattingHistory.swift in Sources */,
 				182769AA250319C400711684 /* LCViewController.swift in Sources */,
+				182769C62504B4A000711684 /* LCUserViewController.swift in Sources */,
+				182769C32504AA6200711684 /* LCViewController+LeftSidebar.swift in Sources */,
+				182769CA2504B9FB00711684 /* NSImage.swift in Sources */,
 				182769BA2503665400711684 /* LCViewController+SendMessage.swift in Sources */,
 				182769A8250319C400711684 /* LCAppDelegate.swift in Sources */,
+				182769BF2504A21A00711684 /* LCLandChatUser.swift in Sources */,
 				182769B825031EDC00711684 /* LCViewController+NSTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

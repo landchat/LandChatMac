@@ -690,6 +690,8 @@
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="600" height="450"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
+                        <value key="minSize" type="size" width="600" height="450"/>
+                        <value key="maxSize" type="size" width="600" height="450"/>
                         <connections>
                             <outlet property="delegate" destination="B8D-0N-5wS" id="98r-iN-zZc"/>
                         </connections>
@@ -710,6 +712,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="450"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <containerView translatesAutoresizingMaskIntoConstraints="NO" id="KIX-eL-P2n">
+                                <rect key="frame" x="67" y="0.0" width="533" height="450"/>
+                                <connections>
+                                    <binding destination="XfG-lQ-9wD" name="hidden" keyPath="isUserViewHidden" id="9Td-1F-ijB">
+                                        <dictionary key="options">
+                                            <integer key="NSMultipleValuesPlaceholder" value="1"/>
+                                            <integer key="NSNoSelectionPlaceholder" value="1"/>
+                                            <integer key="NSNotApplicablePlaceholder" value="1"/>
+                                            <integer key="NSNullPlaceholder" value="1"/>
+                                        </dictionary>
+                                    </binding>
+                                    <segue destination="RQA-4z-Rgf" kind="embed" id="ROa-Wn-0dA"/>
+                                </connections>
+                            </containerView>
                             <visualEffectView blendingMode="behindWindow" material="sidebar" state="followsWindowActiveState" translatesAutoresizingMaskIntoConstraints="NO" id="QHw-BO-ESS">
                                 <rect key="frame" x="0.0" y="0.0" width="67" height="450"/>
                                 <subviews>
@@ -720,6 +736,20 @@
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
+                                        <connections>
+                                            <action selector="chatButtonClicked:" target="XfG-lQ-9wD" id="rcT-pl-GPn"/>
+                                        </connections>
+                                    </button>
+                                    <button wantsLayer="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fdX-h1-6hH">
+                                        <rect key="frame" x="18" y="287" width="30" height="33"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                        <buttonCell key="cell" type="smallSquare" bezelStyle="smallSquare" image="NSTouchBarUserTemplate" imagePosition="overlaps" alignment="center" lineBreakMode="truncatingTail" state="on" imageScaling="proportionallyUpOrDown" inset="2" id="T4L-za-6S3">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="userButtonClicked:" target="XfG-lQ-9wD" id="hxI-t7-JUg"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -815,6 +845,16 @@
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
+                                <connections>
+                                    <binding destination="XfG-lQ-9wD" name="hidden" keyPath="isChatViewHidden" id="Pe3-4J-VOF">
+                                        <dictionary key="options">
+                                            <integer key="NSMultipleValuesPlaceholder" value="0"/>
+                                            <integer key="NSNoSelectionPlaceholder" value="0"/>
+                                            <integer key="NSNotApplicablePlaceholder" value="0"/>
+                                            <integer key="NSNullPlaceholder" value="0"/>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
                             </scrollView>
                             <splitView arrangesAllSubviews="NO" dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="HHM-ac-zWP">
                                 <rect key="frame" x="271" y="0.0" width="329" height="450"/>
@@ -942,9 +982,20 @@ DQ
                                     <real value="250"/>
                                     <real value="250"/>
                                 </holdingPriorities>
+                                <connections>
+                                    <binding destination="XfG-lQ-9wD" name="hidden" keyPath="isChatViewHidden" id="PII-aL-2Sp">
+                                        <dictionary key="options">
+                                            <integer key="NSMultipleValuesPlaceholder" value="0"/>
+                                            <integer key="NSNoSelectionPlaceholder" value="0"/>
+                                            <integer key="NSNotApplicablePlaceholder" value="0"/>
+                                            <integer key="NSNullPlaceholder" value="0"/>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
                             </splitView>
                         </subviews>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="KIX-eL-P2n" secondAttribute="bottom" id="AGS-vr-Fup"/>
                             <constraint firstAttribute="bottom" secondItem="QHw-BO-ESS" secondAttribute="bottom" id="EUe-4v-BUm"/>
                             <constraint firstItem="QHw-BO-ESS" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="ICc-XD-epb"/>
                             <constraint firstItem="HHM-ac-zWP" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="QtI-fQ-Qed"/>
@@ -954,7 +1005,10 @@ DQ
                             <constraint firstAttribute="bottom" secondItem="laR-zg-z44" secondAttribute="bottom" id="hEq-0C-TxF"/>
                             <constraint firstItem="laR-zg-z44" firstAttribute="leading" secondItem="QHw-BO-ESS" secondAttribute="trailing" id="jIJ-zl-UOF"/>
                             <constraint firstItem="laR-zg-z44" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="kit-p1-AIo"/>
+                            <constraint firstItem="KIX-eL-P2n" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="knu-sf-Flr"/>
                             <constraint firstItem="QHw-BO-ESS" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="s3b-vJ-SAl"/>
+                            <constraint firstItem="KIX-eL-P2n" firstAttribute="leading" secondItem="QHw-BO-ESS" secondAttribute="trailing" id="wpJ-V6-MKn"/>
+                            <constraint firstAttribute="trailing" secondItem="KIX-eL-P2n" secondAttribute="trailing" id="xEw-34-QvL"/>
                         </constraints>
                     </view>
                     <connections>
@@ -969,9 +1023,87 @@ DQ
             </objects>
             <point key="canvasLocation" x="3" y="601"/>
         </scene>
+        <!--User View Controller-->
+        <scene sceneID="ax0-We-ycI">
+            <objects>
+                <viewController id="RQA-4z-Rgf" customClass="LCUserViewController" customModule="LandChat" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="w8X-rB-KcR">
+                        <rect key="frame" x="0.0" y="0.0" width="533" height="450"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hu2-aM-scn">
+                                <rect key="frame" x="20" y="284" width="80" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSUser" id="Nax-gF-4yv"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="wantsLayer" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-uJ-XMq">
+                                <rect key="frame" x="18" y="393" width="62" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Me" id="kLj-kn-g3w">
+                                    <font key="font" metaFont="systemBold" size="40"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ine-VC-liJ">
+                                <rect key="frame" x="114" y="313" width="401" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Name" id="XQ9-X6-lp3">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmn-wB-9Qt">
+                                <rect key="frame" x="100" y="401" width="54" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundTextured" title="Edit" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hNN-yl-rs2">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="editOrDone:" target="RQA-4z-Rgf" id="EK3-p0-OIo"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T21-5W-YgD">
+                                <rect key="frame" x="26" y="254" width="68" height="23"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="roundTextured" title="Choose..." bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aeq-DT-qLc">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="chooseImage:" target="RQA-4z-Rgf" id="1wu-fm-vtv"/>
+                                    <binding destination="RQA-4z-Rgf" name="hidden" keyPath="isEditing" id="MK6-of-81x">
+                                        <dictionary key="options">
+                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                        </dictionary>
+                                    </binding>
+                                </connections>
+                            </button>
+                        </subviews>
+                    </view>
+                    <connections>
+                        <outlet property="avatarImage" destination="hu2-aM-scn" id="Gmg-fw-t9i"/>
+                        <outlet property="nameTextField" destination="Ine-VC-liJ" id="Ndo-Ot-2Q5"/>
+                    </connections>
+                </viewController>
+                <customObject id="gzA-Yh-dK9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="36.5" y="1123"/>
+        </scene>
     </scenes>
     <resources>
         <image name="NSHomeTemplate" width="20" height="14"/>
         <image name="NSTouchBarNewMessageTemplate" width="17" height="14"/>
+        <image name="NSTouchBarUserTemplate" width="15" height="12"/>
+        <image name="NSUser" width="32" height="32"/>
     </resources>
 </document>

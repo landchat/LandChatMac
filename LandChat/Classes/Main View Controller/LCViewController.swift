@@ -15,6 +15,9 @@ class LCViewController: NSViewController {
     @IBOutlet weak var chattingHistory: NSTextView!
     @IBOutlet weak var sendToLabel: NSTextField!
     
+    @objc dynamic var isChatViewHidden = false
+    @objc dynamic var isUserViewHidden = true
+    
     
     static let path = FileManager().urls(for: .libraryDirectory, in: .userDomainMask).first!.appendingPathComponent("LandChat").appendingPathComponent("Recent")
     

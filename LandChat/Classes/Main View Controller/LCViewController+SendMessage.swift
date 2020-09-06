@@ -13,7 +13,7 @@ extension LCViewController {
         
         let message = self.senderTextView.string
         self.senderTextView.string = ""
-        let url = URL(string: "http://landchat.ericnth.cn/addmsg.php?usr=\("LandChatMacTest")&room=\(self.sendToWhich.stringValue)&msg=\(message)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+        let url = URL(string: "http://landchat.ericnth.cn/addmsg.php?usr=\(LCLandChatUser.current?.nickname ?? "UnknownUser")&room=\(self.sendToWhich.stringValue)&msg=\(message)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             if error == nil && data != nil {

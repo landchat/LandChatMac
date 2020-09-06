@@ -23,6 +23,9 @@ class LCAppDelegate: NSObject, NSApplicationDelegate {
                 
             }
         }
+        if LCLandChatUser.current == nil {
+            NSKeyedArchiver.archiveRootObject( LCLandChatUser(nickname: "UnknownUser", avatar: NSImage() ), toFile: LCLandChatUser.path.path)
+        }
         // Insert code here to initialize your application
     }
 
