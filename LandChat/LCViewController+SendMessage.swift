@@ -30,7 +30,15 @@ extension LCViewController {
         }
         task.resume()
         
+        if self.tableView.selectedRow >= 1 {
+            self.recentChatRoomNumbers.remove(at: self.tableView.selectedRow - 1)
+        } else {
+            if self.recentChatRoomNumbers.contains(self.sendToWhich.stringValue) {
+                self.recentChatRoomNumbers.remove(at: self.recentChatRoomNumbers.firstIndex(of: self.sendToWhich.stringValue)!)
+            }
+        }
         self.recentChatRoomNumbers.insert(self.sendToWhich.stringValue, at: 0)
+        self.tableView?.selectRowIndexes(IndexSet(arrayLiteral: 1), byExtendingSelection: false)
         
     }
     

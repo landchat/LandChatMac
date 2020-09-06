@@ -777,9 +777,9 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kvw-9m-E9b">
-                                                                    <rect key="frame" x="56" y="11" width="88" height="16"/>
+                                                                    <rect key="frame" x="56" y="11" width="113" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="ericnth: Hello!" id="76T-Gk-Lfs">
+                                                                    <textFieldCell key="cell" lineBreakMode="truncatingTail" title="ericnth: Hello!" usesSingleLineMode="YES" id="76T-Gk-Lfs">
                                                                         <font key="font" metaFont="systemLight" size="13"/>
                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -829,7 +829,7 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <textView drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="apO-5s-flY">
+                                                        <textView editable="NO" drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="apO-5s-flY">
                                                             <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -959,6 +959,7 @@ DQ
                     </view>
                     <connections>
                         <outlet property="chattingHistory" destination="apO-5s-flY" id="SJJ-9F-Wqq"/>
+                        <outlet property="sendToLabel" destination="HVg-tk-7rG" id="ec8-ds-JXF"/>
                         <outlet property="sendToWhich" destination="C2l-Wh-h6r" id="sq8-ov-PJn"/>
                         <outlet property="senderTextView" destination="Qrp-35-kQH" id="X9R-iF-9Wx"/>
                         <outlet property="tableView" destination="Kl1-pa-pJx" id="zp5-Ik-8fr"/>
