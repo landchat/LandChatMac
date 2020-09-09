@@ -18,6 +18,10 @@
 		182769C32504AA6200711684 /* LCViewController+LeftSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769C22504AA6200711684 /* LCViewController+LeftSidebar.swift */; };
 		182769C62504B4A000711684 /* LCUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769C52504B4A000711684 /* LCUserViewController.swift */; };
 		182769CA2504B9FB00711684 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769C92504B9FB00711684 /* NSImage.swift */; };
+		182769CC2507B13700711684 /* LCViewController+ChattingHistory2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769CB2507B13700711684 /* LCViewController+ChattingHistory2.swift */; };
+		18F8C8252508E7AC001CCC0C /* LCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C8242508E7AC001CCC0C /* LCLoginViewController.swift */; };
+		18F8C8272508EB46001CCC0C /* LCLoginRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C8262508EB46001CCC0C /* LCLoginRequestResult.swift */; };
+		18F8C8292508F649001CCC0C /* NSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C8282508F649001CCC0C /* NSViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +40,10 @@
 		182769C22504AA6200711684 /* LCViewController+LeftSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LCViewController+LeftSidebar.swift"; sourceTree = "<group>"; };
 		182769C52504B4A000711684 /* LCUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCUserViewController.swift; sourceTree = "<group>"; };
 		182769C92504B9FB00711684 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
+		182769CB2507B13700711684 /* LCViewController+ChattingHistory2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LCViewController+ChattingHistory2.swift"; sourceTree = "<group>"; };
+		18F8C8242508E7AC001CCC0C /* LCLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCLoginViewController.swift; sourceTree = "<group>"; };
+		18F8C8262508EB46001CCC0C /* LCLoginRequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCLoginRequestResult.swift; sourceTree = "<group>"; };
+		18F8C8282508F649001CCC0C /* NSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +80,6 @@
 				182769C82504B9EE00711684 /* Utilities */,
 				182769C42504B45F00711684 /* Classes */,
 				182769AB250319C400711684 /* Assets.xcassets */,
-				182769AD250319C400711684 /* Main.storyboard */,
 				182769B0250319C400711684 /* Info.plist */,
 				182769B1250319C400711684 /* LandChat.entitlements */,
 			);
@@ -84,6 +91,7 @@
 			children = (
 				182769A9250319C400711684 /* LCViewController.swift */,
 				182769B725031EDC00711684 /* LCViewController+NSTableView.swift */,
+				182769CB2507B13700711684 /* LCViewController+ChattingHistory2.swift */,
 				182769C22504AA6200711684 /* LCViewController+LeftSidebar.swift */,
 				182769B92503665400711684 /* LCViewController+SendMessage.swift */,
 				182769BB250375B800711684 /* LCViewController+ChattingHistory.swift */,
@@ -94,6 +102,8 @@
 		182769C42504B45F00711684 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				182769AD250319C400711684 /* Main.storyboard */,
+				18F8C8232508E79D001CCC0C /* Login */,
 				182769A7250319C400711684 /* LCAppDelegate.swift */,
 				182769C72504B81600711684 /* User */,
 				182769C12504A42100711684 /* Main View Controller */,
@@ -114,8 +124,18 @@
 			isa = PBXGroup;
 			children = (
 				182769C92504B9FB00711684 /* NSImage.swift */,
+				18F8C8282508F649001CCC0C /* NSViewController.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		18F8C8232508E79D001CCC0C /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				18F8C8242508E7AC001CCC0C /* LCLoginViewController.swift */,
+				18F8C8262508EB46001CCC0C /* LCLoginRequestResult.swift */,
+			);
+			path = Login;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -194,8 +214,12 @@
 				182769C32504AA6200711684 /* LCViewController+LeftSidebar.swift in Sources */,
 				182769CA2504B9FB00711684 /* NSImage.swift in Sources */,
 				182769BA2503665400711684 /* LCViewController+SendMessage.swift in Sources */,
+				18F8C8252508E7AC001CCC0C /* LCLoginViewController.swift in Sources */,
 				182769A8250319C400711684 /* LCAppDelegate.swift in Sources */,
+				182769CC2507B13700711684 /* LCViewController+ChattingHistory2.swift in Sources */,
+				18F8C8272508EB46001CCC0C /* LCLoginRequestResult.swift in Sources */,
 				182769BF2504A21A00711684 /* LCLandChatUser.swift in Sources */,
+				18F8C8292508F649001CCC0C /* NSViewController.swift in Sources */,
 				182769B825031EDC00711684 /* LCViewController+NSTableView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
