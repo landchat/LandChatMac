@@ -11,6 +11,7 @@ class LCUserViewController: NSViewController {
     
     @IBOutlet weak var avatarImage: NSImageView!
     @IBOutlet weak var nameTextField: NSTextField!
+    @IBOutlet weak var uidLabel: NSTextField!
     @objc dynamic var isEditing = false
     
     @IBAction func editOrDone(_ sender: NSButton?) {
@@ -22,8 +23,7 @@ class LCUserViewController: NSViewController {
         } else {
             self.nameTextField.resignFirstResponder()
             self.nameTextField.isEditable = false
-            LCLandChatUser.setNickname( self.nameTextField.stringValue )
-            LCLandChatUser.setAvatar( self.avatarImage.image ?? NSImage() )
+            // yUserDefaults.standard.set( self.nameTextField.stringValue, forKey: "UserNickName" )
             sender?.title = "Edit"
         }
     }
@@ -42,8 +42,8 @@ class LCUserViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.nameTextField.stringValue = LCLandChatUser.current?.nickname ?? "UnknownUser"
-        self.avatarImage.image = LCLandChatUser.current?.avatar
+        self.nameTextField.stringValue = UserDefaults.standard.string(forKey: "UserName") ?? "Unknown User"
+        self.uidLabel.stringValue = "LandChat User ID: " + ( UserDefaults.standard.string(forKey: "LoginUserID") ?? "Unknown" )
         
     }
     

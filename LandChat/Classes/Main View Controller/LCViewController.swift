@@ -12,8 +12,10 @@ class LCViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var senderTextView: NSTextView!
     @IBOutlet weak var sendToWhich: NSTextField!
-    @IBOutlet weak var chattingHistory: NSTextView!
+    @IBOutlet weak var chattingHistory: NSTableView!
     @IBOutlet weak var sendToLabel: NSTextField!
+    
+    var currentChattingGroup: LCChattingMessageGroup!
     
     @objc dynamic var isChatViewHidden = false
     @objc dynamic var isUserViewHidden = true

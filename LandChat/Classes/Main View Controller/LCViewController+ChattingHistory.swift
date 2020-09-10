@@ -16,7 +16,29 @@ extension LCViewController {
             self.sendToWhich.isHidden = false
             return
         }
-    
+        
+        let clickedRow = self.tableView.clickedRow
+        
+      //  DispatchQueue.main.async {
+        
+            LCChattingMessageGroup.messageGroup(ofName: "\(self.recentChatRoomNumbers[clickedRow - 1])") {
+                (bool, result) in
+                DispatchQueue.main.async {
+                    if bool {
+                        if result!.messages != nil {
+                            self.currentChattingGroup = result!
+                            self.chattingHistory.dataSource = self.currentChattingGroup
+                            self.chattingHistory.delegate = self.currentChattingGroup
+                            self.chattingHistory.reloadData()
+                        }
+                    } else {
+                        self.showAlert("Error", "No such chatting group.")
+                    }
+                }
+            }
+            
+      //  }
+    /*
         self.sendToLabel.isHidden = true
         self.sendToWhich.isHidden = true
         self.sendToWhich.stringValue = self.recentChatRoomNumbers[self.tableView.clickedRow - 1]
@@ -36,7 +58,7 @@ extension LCViewController {
             }
         }
         task.resume()
-        
+        */
     }
     
 }

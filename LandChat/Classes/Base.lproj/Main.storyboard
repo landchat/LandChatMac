@@ -686,7 +686,7 @@
             <objects>
                 <windowController storyboardIdentifier="Login" id="CsE-2O-JcZ" sceneMemberID="viewController">
                     <window key="window" title="Login - LandChat" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="zDn-75-oT3">
-                        <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"/>
+                        <windowStyleMask key="styleMask" titled="YES" closable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="239" width="320" height="160"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1440" height="875"/>
@@ -715,21 +715,21 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RhC-J9-MXr">
-                                <rect key="frame" x="20" y="32" width="100" height="100"/>
+                                <rect key="frame" x="20" y="26" width="100" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSUser" id="Gkj-BY-gaZ"/>
                             </imageView>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jeh-Cx-9pH">
-                                <rect key="frame" x="134" y="119" width="134" height="19"/>
+                                <rect key="frame" x="134" y="113" width="148" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="LandChat - Login" id="2TA-iI-RUE">
-                                    <font key="font" metaFont="systemSemibold" size="16"/>
+                                    <font key="font" metaFont="systemSemibold" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fg5-Mr-cVO">
-                                <rect key="frame" x="135" y="20" width="61" height="23"/>
+                                <rect key="frame" x="135" y="14" width="61" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundTextured" title="Login" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="mIc-vJ-Rpp">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -740,7 +740,7 @@
                                 </connections>
                             </button>
                             <secureTextField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="owC-Iy-kuk">
-                                <rect key="frame" x="136" y="56" width="155" height="21"/>
+                                <rect key="frame" x="136" y="50" width="155" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <secureTextFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Password" drawsBackground="YES" usesSingleLineMode="YES" id="PUp-Nr-mjF">
                                     <font key="font" metaFont="system"/>
@@ -752,7 +752,7 @@
                                 </secureTextFieldCell>
                             </secureTextField>
                             <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="sqc-ao-kBi">
-                                <rect key="frame" x="136" y="86" width="155" height="21"/>
+                                <rect key="frame" x="136" y="80" width="155" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" placeholderString="User ID" drawsBackground="YES" id="ATO-4f-pht">
                                     <numberFormatter key="formatter" formatterBehavior="custom10_4" localizesFormat="NO" numberStyle="decimal" allowsFloats="NO" usesGroupingSeparator="NO" formatWidth="-1" minimumIntegerDigits="1" maximumIntegerDigits="2000000000" maximumFractionDigits="3" id="BOQ-eJ-AjF"/>
@@ -762,7 +762,7 @@
                                 </textFieldCell>
                             </textField>
                             <button hidden="YES" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tnn-VP-p7p">
-                                <rect key="frame" x="219" y="20" width="73" height="23"/>
+                                <rect key="frame" x="219" y="14" width="73" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <buttonCell key="cell" type="roundTextured" title="Register" bezelStyle="texturedRounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="GCK-s7-SHk">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
@@ -772,6 +772,7 @@
                         </subviews>
                     </view>
                     <connections>
+                        <outlet property="imageView" destination="RhC-J9-MXr" id="MK9-V7-9tb"/>
                         <outlet property="passwordField" destination="owC-Iy-kuk" id="IoA-Qs-Obg"/>
                         <outlet property="userID" destination="sqc-ao-kBi" id="57f-oj-NBY"/>
                     </connections>
@@ -988,7 +989,7 @@
                                                                     </textFieldCell>
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <prototypeCellViews>
-                                                                        <tableCellView id="4h9-dn-s9O">
+                                                                        <tableCellView identifier="A" id="4h9-dn-s9O" customClass="LCChatTableCellView" customModule="LandChat" customModuleProvider="target">
                                                                             <rect key="frame" x="18" y="0.0" width="312" height="53"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
@@ -997,14 +998,21 @@
                                                                                     <textFieldCell key="cell" selectable="YES" title="Multiline Label" drawsBackground="YES" id="A0g-qb-QZS">
                                                                                         <font key="font" metaFont="system"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                                                        <color key="backgroundColor" name="systemYellowColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <color key="backgroundColor" name="systemBrownColor" catalog="System" colorSpace="catalog"/>
                                                                                     </textFieldCell>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="wantsLayer" value="YES"/>
+                                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                            <integer key="value" value="5"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
                                                                                 </textField>
                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="waC-ee-Bzj">
                                                                                     <rect key="frame" x="1" y="31" width="35" height="15"/>
                                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="3WC-RS-mCG">
                                                                                         <font key="font" metaFont="cellTitle"/>
-                                                                                        <color key="textColor" name="underPageBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                     </textFieldCell>
                                                                                 </textField>
@@ -1012,11 +1020,48 @@
                                                                             <constraints>
                                                                                 <constraint firstItem="waC-ee-Bzj" firstAttribute="top" secondItem="4h9-dn-s9O" secondAttribute="top" constant="7" id="7Tc-Zs-Tex"/>
                                                                                 <constraint firstItem="waC-ee-Bzj" firstAttribute="leading" secondItem="4h9-dn-s9O" secondAttribute="leading" constant="3" id="anA-on-AyW"/>
-                                                                                <constraint firstAttribute="bottom" secondItem="8Hd-y7-til" secondAttribute="bottom" constant="7" id="cIF-Zd-Ib6"/>
                                                                                 <constraint firstAttribute="trailing" secondItem="8Hd-y7-til" secondAttribute="trailing" constant="69" id="cuu-kg-5jJ"/>
                                                                                 <constraint firstItem="8Hd-y7-til" firstAttribute="leading" secondItem="4h9-dn-s9O" secondAttribute="leading" constant="3" id="lUB-Nt-ayz"/>
                                                                                 <constraint firstItem="8Hd-y7-til" firstAttribute="top" secondItem="waC-ee-Bzj" secondAttribute="bottom" constant="8" symbolic="YES" id="vr8-Ag-u48"/>
                                                                             </constraints>
+                                                                            <connections>
+                                                                                <outlet property="message" destination="8Hd-y7-til" id="dzD-M0-J6N"/>
+                                                                                <outlet property="sender" destination="waC-ee-Bzj" id="Imk-FJ-TcS"/>
+                                                                            </connections>
+                                                                        </tableCellView>
+                                                                        <tableCellView identifier="B" id="Gc9-Q8-XRi" customClass="LCChatTableCellView" customModule="LandChat" customModuleProvider="target">
+                                                                            <rect key="frame" x="18" y="53" width="312" height="44"/>
+                                                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                                            <subviews>
+                                                                                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iLX-Uj-eCx">
+                                                                                    <rect key="frame" x="268" y="28" width="35" height="15"/>
+                                                                                    <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="tW7-9z-KMZ">
+                                                                                        <font key="font" metaFont="cellTitle"/>
+                                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                                    </textFieldCell>
+                                                                                </textField>
+                                                                                <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="C5K-jt-FS4">
+                                                                                    <rect key="frame" x="63" y="7" width="240" height="16"/>
+                                                                                    <textFieldCell key="cell" selectable="YES" title="Multiline Label" drawsBackground="YES" id="97u-bX-GIl">
+                                                                                        <font key="font" metaFont="system"/>
+                                                                                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                                                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                                                    </textFieldCell>
+                                                                                </textField>
+                                                                            </subviews>
+                                                                            <constraints>
+                                                                                <constraint firstItem="C5K-jt-FS4" firstAttribute="top" secondItem="iLX-Uj-eCx" secondAttribute="bottom" constant="5" id="91L-u7-xfB"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="iLX-Uj-eCx" secondAttribute="trailing" constant="11" id="KfY-1m-Lfz"/>
+                                                                                <constraint firstItem="iLX-Uj-eCx" firstAttribute="top" secondItem="Gc9-Q8-XRi" secondAttribute="top" constant="1" id="S3f-3n-Dau"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="C5K-jt-FS4" secondAttribute="trailing" constant="9" id="ZSf-ph-C5t"/>
+                                                                                <constraint firstAttribute="bottom" secondItem="C5K-jt-FS4" secondAttribute="bottom" constant="7" id="ZtE-eW-G2z"/>
+                                                                                <constraint firstItem="C5K-jt-FS4" firstAttribute="leading" secondItem="Gc9-Q8-XRi" secondAttribute="leading" constant="63" id="yab-OV-0xc"/>
+                                                                            </constraints>
+                                                                            <connections>
+                                                                                <outlet property="message" destination="C5K-jt-FS4" id="S1v-va-fYQ"/>
+                                                                                <outlet property="sender" destination="iLX-Uj-eCx" id="gZ0-ke-rx2"/>
+                                                                            </connections>
                                                                         </tableCellView>
                                                                     </prototypeCellViews>
                                                                 </tableColumn>
@@ -1025,7 +1070,7 @@
                                                     </subviews>
                                                     <nil key="backgroundColor"/>
                                                 </clipView>
-                                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="wPU-yb-gX5">
+                                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.050000000000000003" horizontal="YES" id="wPU-yb-gX5">
                                                     <rect key="frame" x="0.0" y="315" width="329" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
@@ -1041,17 +1086,17 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gAm-u3-F4q">
-                                                <rect key="frame" x="0.0" y="32" width="329" height="60"/>
+                                                <rect key="frame" x="0.0" y="32" width="329" height="86"/>
                                                 <clipView key="contentView" drawsBackground="NO" id="Xku-Az-DwQ">
-                                                    <rect key="frame" x="0.0" y="0.0" width="329" height="60"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="329" height="86"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
-                                                        <textView drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" allowsUndo="YES" smartInsertDelete="YES" id="Qrp-35-kQH">
-                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="60"/>
+                                                        <textView drawsBackground="NO" importsGraphics="NO" richText="NO" verticallyResizable="YES" findStyle="bar" allowsUndo="YES" smartInsertDelete="YES" id="Qrp-35-kQH">
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="86"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                            <size key="minSize" width="329" height="60"/>
+                                                            <size key="minSize" width="329" height="86"/>
                                                             <size key="maxSize" width="348" height="10000000"/>
                                                             <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                         </textView>
@@ -1062,28 +1107,10 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                                 <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="bzM-9w-xqw">
-                                                    <rect key="frame" x="313" y="0.0" width="16" height="60"/>
+                                                    <rect key="frame" x="313" y="0.0" width="16" height="86"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>
-                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HVg-tk-7rG">
-                                                <rect key="frame" x="5" y="97" width="120" height="16"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <textFieldCell key="cell" lineBreakMode="clipping" title="Send to chatroom: " id="VWy-6f-sOA">
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
-                                            <textField verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="C2l-Wh-h6r">
-                                                <rect key="frame" x="129" y="94" width="96" height="21"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="1" bezelStyle="round" id="sFt-z4-gC7">
-                                                    <font key="font" metaFont="system"/>
-                                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                </textFieldCell>
-                                            </textField>
                                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RIC-qQ-xd6">
                                                 <rect key="frame" x="246" y="0.0" width="77" height="32"/>
                                                 <buttonCell key="cell" type="push" title="Send" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="AkU-bf-JAS">
@@ -1102,7 +1129,7 @@ DQ
                                             <constraint firstAttribute="trailing" secondItem="RIC-qQ-xd6" secondAttribute="trailing" constant="13" id="5KD-PM-qw0"/>
                                             <constraint firstAttribute="bottom" secondItem="gAm-u3-F4q" secondAttribute="bottom" constant="32" id="E0Q-m1-de7"/>
                                             <constraint firstAttribute="bottom" secondItem="RIC-qQ-xd6" secondAttribute="bottom" constant="7" id="Id8-Hj-cub"/>
-                                            <constraint firstItem="gAm-u3-F4q" firstAttribute="top" secondItem="KMx-ab-Wjh" secondAttribute="top" constant="26" id="Iw5-de-xDa"/>
+                                            <constraint firstItem="gAm-u3-F4q" firstAttribute="top" secondItem="KMx-ab-Wjh" secondAttribute="top" id="Iw5-de-xDa"/>
                                             <constraint firstItem="gAm-u3-F4q" firstAttribute="leading" secondItem="KMx-ab-Wjh" secondAttribute="leading" id="jFm-6e-TY4"/>
                                             <constraint firstAttribute="trailing" secondItem="gAm-u3-F4q" secondAttribute="trailing" id="q8Q-a8-nKm"/>
                                         </constraints>
@@ -1142,8 +1169,7 @@ DQ
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="sendToLabel" destination="HVg-tk-7rG" id="ec8-ds-JXF"/>
-                        <outlet property="sendToWhich" destination="C2l-Wh-h6r" id="sq8-ov-PJn"/>
+                        <outlet property="chattingHistory" destination="50W-kf-6B2" id="urf-ug-6pb"/>
                         <outlet property="senderTextView" destination="Qrp-35-kQH" id="X9R-iF-9Wx"/>
                         <outlet property="tableView" destination="Kl1-pa-pJx" id="zp5-Ik-8fr"/>
                     </connections>
@@ -1181,15 +1207,6 @@ DQ
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ine-VC-liJ">
-                                <rect key="frame" x="114" y="313" width="401" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Name" id="XQ9-X6-lp3">
-                                    <font key="font" metaFont="system" size="18"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
                             <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmn-wB-9Qt">
                                 <rect key="frame" x="100" y="401" width="54" height="23"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
@@ -1217,11 +1234,30 @@ DQ
                                     </binding>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v1z-hl-2bQ">
+                                <rect key="frame" x="115" y="296" width="400" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="LandChat User ID: 0" id="h7Y-Gr-wob">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ine-VC-liJ">
+                                <rect key="frame" x="114" y="326" width="401" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Name" id="XQ9-X6-lp3">
+                                    <font key="font" metaFont="system" size="18"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                     </view>
                     <connections>
                         <outlet property="avatarImage" destination="hu2-aM-scn" id="Gmg-fw-t9i"/>
                         <outlet property="nameTextField" destination="Ine-VC-liJ" id="Ndo-Ot-2Q5"/>
+                        <outlet property="uidLabel" destination="v1z-hl-2bQ" id="KDa-bo-dTo"/>
                     </connections>
                 </viewController>
                 <customObject id="gzA-Yh-dK9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

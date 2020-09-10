@@ -12,7 +12,7 @@ class LCLandChatUser: NSObject, NSCoding {
     static let path = FileManager().urls(for: .libraryDirectory, in: .userDomainMask).first!.appendingPathComponent("LandChat").appendingPathComponent("UserData")
     
     var nickname = "UnknownUser"
-    // var id: Int = -1
+    var id: Int = -1
     var avatar: NSImage = NSImage()
     
     func encode(with coder: NSCoder) {
