@@ -21,12 +21,16 @@ extension LCChattingMessageGroup: NSTableViewDelegate, NSTableViewDataSource {
     }
     
     func tableView(_ tableView: NSTableView, heightOfRow row: Int) -> CGFloat {
-        return NSTextFieldCell(textCell: "\(self.messages![min(250, self.messages!.count) - row - 1].message)").cellSize(forBounds: NSMakeRect(0, 0, 240, 999999999.0 )).height + 40
+
+        let cell = NSTextFieldCell(textCell: "\(self.messages![min(250, self.messages!.count) - row - 1].message)")
+        cell.font = NSFont.systemFont(ofSize: 13.0)
+        return cell.cellSize(forBounds: NSMakeRect(0, 0, 220, 999999999.0 )).height + 40
+        
     }
     
     func tableView(_ tableView: NSTableView, viewFor tableColumn: NSTableColumn?, row: Int) -> NSView? {
         var identifier = "A"
-        if self.messages![min(250, self.messages!.count) - row - 1].user == LCLandChatUser.current?.nickname {
+        if self.messages![min(250, self.messages!.count) - row - 1].senderUid == UserDefaults.standard.string(forKey: "LoginUserID") {
             identifier = "B"
         }
         if let view = tableView.makeView(withIdentifier: NSUserInterfaceItemIdentifier(rawValue: identifier), owner: self) as? LCChatTableCellView {

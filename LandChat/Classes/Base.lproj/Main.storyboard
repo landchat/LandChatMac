@@ -959,25 +959,24 @@
                             <splitView arrangesAllSubviews="NO" dividerStyle="thin" translatesAutoresizingMaskIntoConstraints="NO" id="HHM-ac-zWP">
                                 <rect key="frame" x="271" y="0.0" width="329" height="450"/>
                                 <subviews>
-                                    <customView fixedFrame="YES" id="OY5-27-nqi">
+                                    <customView id="OY5-27-nqi">
                                         <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
-                                            <scrollView fixedFrame="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="53" horizontalPageScroll="10" verticalLineScroll="53" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omm-3s-X1K">
+                                            <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="53" horizontalPageScroll="10" verticalLineScroll="53" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omm-3s-X1K">
                                                 <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                 <clipView key="contentView" drawsBackground="NO" id="npJ-cQ-2bs">
                                                     <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="53" rowSizeStyle="automatic" viewBased="YES" id="50W-kf-6B2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="349" height="331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                                             <tableColumns>
-                                                                <tableColumn width="317" minWidth="40" maxWidth="1000" id="nky-JC-4e2">
+                                                                <tableColumn width="297" minWidth="40" maxWidth="1000" id="nky-JC-4e2">
                                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
                                                                         <color key="backgroundColor" name="headerColor" catalog="System" colorSpace="catalog"/>
@@ -990,11 +989,11 @@
                                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                                     <prototypeCellViews>
                                                                         <tableCellView identifier="A" id="4h9-dn-s9O" customClass="LCChatTableCellView" customModule="LandChat" customModuleProvider="target">
-                                                                            <rect key="frame" x="18" y="0.0" width="312" height="53"/>
+                                                                            <rect key="frame" x="18" y="0.0" width="292" height="53"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="8Hd-y7-til">
-                                                                                    <rect key="frame" x="3" y="7" width="240" height="16"/>
+                                                                                    <rect key="frame" x="3" y="8" width="200" height="16"/>
                                                                                     <textFieldCell key="cell" selectable="YES" title="Multiline Label" drawsBackground="YES" id="A0g-qb-QZS">
                                                                                         <font key="font" metaFont="system"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1020,9 +1019,9 @@
                                                                             <constraints>
                                                                                 <constraint firstItem="waC-ee-Bzj" firstAttribute="top" secondItem="4h9-dn-s9O" secondAttribute="top" constant="7" id="7Tc-Zs-Tex"/>
                                                                                 <constraint firstItem="waC-ee-Bzj" firstAttribute="leading" secondItem="4h9-dn-s9O" secondAttribute="leading" constant="3" id="anA-on-AyW"/>
-                                                                                <constraint firstAttribute="trailing" secondItem="8Hd-y7-til" secondAttribute="trailing" constant="69" id="cuu-kg-5jJ"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="8Hd-y7-til" secondAttribute="trailing" constant="89" id="cuu-kg-5jJ"/>
                                                                                 <constraint firstItem="8Hd-y7-til" firstAttribute="leading" secondItem="4h9-dn-s9O" secondAttribute="leading" constant="3" id="lUB-Nt-ayz"/>
-                                                                                <constraint firstItem="8Hd-y7-til" firstAttribute="top" secondItem="waC-ee-Bzj" secondAttribute="bottom" constant="8" symbolic="YES" id="vr8-Ag-u48"/>
+                                                                                <constraint firstItem="8Hd-y7-til" firstAttribute="top" secondItem="waC-ee-Bzj" secondAttribute="bottom" constant="7" id="vr8-Ag-u48"/>
                                                                             </constraints>
                                                                             <connections>
                                                                                 <outlet property="message" destination="8Hd-y7-til" id="dzD-M0-J6N"/>
@@ -1030,11 +1029,11 @@
                                                                             </connections>
                                                                         </tableCellView>
                                                                         <tableCellView identifier="B" id="Gc9-Q8-XRi" customClass="LCChatTableCellView" customModule="LandChat" customModuleProvider="target">
-                                                                            <rect key="frame" x="18" y="53" width="312" height="44"/>
+                                                                            <rect key="frame" x="18" y="53" width="292" height="44"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iLX-Uj-eCx">
-                                                                                    <rect key="frame" x="268" y="28" width="35" height="15"/>
+                                                                                    <rect key="frame" x="256" y="22" width="35" height="15"/>
                                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="tW7-9z-KMZ">
                                                                                         <font key="font" metaFont="cellTitle"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -1042,21 +1041,27 @@
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="C5K-jt-FS4">
-                                                                                    <rect key="frame" x="63" y="7" width="240" height="16"/>
+                                                                                    <rect key="frame" x="89" y="-1" width="200" height="16"/>
                                                                                     <textFieldCell key="cell" selectable="YES" title="Multiline Label" drawsBackground="YES" id="97u-bX-GIl">
                                                                                         <font key="font" metaFont="system"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                                                                         <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                                     </textFieldCell>
+                                                                                    <userDefinedRuntimeAttributes>
+                                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="wantsLayer" value="YES"/>
+                                                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                                                            <integer key="value" value="5"/>
+                                                                                        </userDefinedRuntimeAttribute>
+                                                                                    </userDefinedRuntimeAttributes>
                                                                                 </textField>
                                                                             </subviews>
                                                                             <constraints>
-                                                                                <constraint firstItem="C5K-jt-FS4" firstAttribute="top" secondItem="iLX-Uj-eCx" secondAttribute="bottom" constant="5" id="91L-u7-xfB"/>
-                                                                                <constraint firstAttribute="trailing" secondItem="iLX-Uj-eCx" secondAttribute="trailing" constant="11" id="KfY-1m-Lfz"/>
-                                                                                <constraint firstItem="iLX-Uj-eCx" firstAttribute="top" secondItem="Gc9-Q8-XRi" secondAttribute="top" constant="1" id="S3f-3n-Dau"/>
-                                                                                <constraint firstAttribute="trailing" secondItem="C5K-jt-FS4" secondAttribute="trailing" constant="9" id="ZSf-ph-C5t"/>
-                                                                                <constraint firstAttribute="bottom" secondItem="C5K-jt-FS4" secondAttribute="bottom" constant="7" id="ZtE-eW-G2z"/>
-                                                                                <constraint firstItem="C5K-jt-FS4" firstAttribute="leading" secondItem="Gc9-Q8-XRi" secondAttribute="leading" constant="63" id="yab-OV-0xc"/>
+                                                                                <constraint firstItem="C5K-jt-FS4" firstAttribute="top" secondItem="iLX-Uj-eCx" secondAttribute="bottom" constant="7" id="91L-u7-xfB"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="iLX-Uj-eCx" secondAttribute="trailing" constant="3" id="KfY-1m-Lfz"/>
+                                                                                <constraint firstItem="iLX-Uj-eCx" firstAttribute="top" secondItem="Gc9-Q8-XRi" secondAttribute="top" constant="7" id="S3f-3n-Dau"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="C5K-jt-FS4" secondAttribute="trailing" constant="3" id="ZSf-ph-C5t"/>
+                                                                                <constraint firstItem="C5K-jt-FS4" firstAttribute="leading" secondItem="Gc9-Q8-XRi" secondAttribute="leading" constant="89" id="yab-OV-0xc"/>
                                                                             </constraints>
                                                                             <connections>
                                                                                 <outlet property="message" destination="C5K-jt-FS4" id="S1v-va-fYQ"/>
@@ -1070,7 +1075,7 @@
                                                     </subviews>
                                                     <nil key="backgroundColor"/>
                                                 </clipView>
-                                                <scroller key="horizontalScroller" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.050000000000000003" horizontal="YES" id="wPU-yb-gX5">
+                                                <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="0.5" horizontal="YES" id="wPU-yb-gX5">
                                                     <rect key="frame" x="0.0" y="315" width="329" height="16"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
@@ -1080,6 +1085,12 @@
                                                 </scroller>
                                             </scrollView>
                                         </subviews>
+                                        <constraints>
+                                            <constraint firstItem="Omm-3s-X1K" firstAttribute="top" secondItem="OY5-27-nqi" secondAttribute="top" id="LuO-Sj-pm8"/>
+                                            <constraint firstAttribute="bottom" secondItem="Omm-3s-X1K" secondAttribute="bottom" id="Pni-h2-mcX"/>
+                                            <constraint firstItem="Omm-3s-X1K" firstAttribute="leading" secondItem="OY5-27-nqi" secondAttribute="leading" id="rPW-QF-Beu"/>
+                                            <constraint firstAttribute="trailing" secondItem="Omm-3s-X1K" secondAttribute="trailing" id="yDL-Mr-B8h"/>
+                                        </constraints>
                                     </customView>
                                     <customView id="KMx-ab-Wjh">
                                         <rect key="frame" x="0.0" y="332" width="329" height="118"/>

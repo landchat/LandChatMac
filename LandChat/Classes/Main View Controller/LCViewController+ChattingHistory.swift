@@ -12,8 +12,6 @@ extension LCViewController {
     @IBAction func didClickTableView(_ sender: Any?) {
         
         guard self.tableView.clickedRow >= 1 else {
-            self.sendToLabel.isHidden = false
-            self.sendToWhich.isHidden = false
             return
         }
         

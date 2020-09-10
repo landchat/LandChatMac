@@ -11,9 +11,7 @@ class LCViewController: NSViewController {
     
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var senderTextView: NSTextView!
-    @IBOutlet weak var sendToWhich: NSTextField!
     @IBOutlet weak var chattingHistory: NSTableView!
-    @IBOutlet weak var sendToLabel: NSTextField!
     
     var currentChattingGroup: LCChattingMessageGroup!
     

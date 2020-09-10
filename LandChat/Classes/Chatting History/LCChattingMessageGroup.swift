@@ -18,15 +18,13 @@ class LCChattingMessageGroup: NSObject, Codable {
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             if data != nil && error == nil {
-                print("Received \(String(data: data!, encoding: .utf8) ?? "ERROR")")
                 do {
-                    print("No Error")
                     result( true, try JSONDecoder().decode(LCChattingMessageGroup.self, from: data!) )
+                    return
                 } catch {
-                    print("Invalid")
+                    return
                 }
             }
-            print("Error")
             result( false, nil )
         }
         task.resume()

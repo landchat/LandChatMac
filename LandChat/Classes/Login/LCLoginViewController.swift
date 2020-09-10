@@ -38,7 +38,8 @@ class LCLoginViewController: NSViewController {
                             vc.showWindow(nil)
                             self.view.window?.close()
                         }
-                    } else { UserDefaults.standard.set("", forKey: "LoginPassword")
+                    } else {
+                        UserDefaults.standard.set("", forKey: "LoginPassword")
                         self.showAlert("Login Failed.", "")
                     }
                 } else {
