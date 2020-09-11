@@ -857,13 +857,13 @@
                                 </constraints>
                             </visualEffectView>
                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="66" horizontalPageScroll="10" verticalLineScroll="66" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="laR-zg-z44">
-                                <rect key="frame" x="67" y="0.0" width="204" height="450"/>
+                                <rect key="frame" x="67" y="0.0" width="204" height="410"/>
                                 <clipView key="contentView" drawsBackground="NO" id="QnO-Or-JK3">
-                                    <rect key="frame" x="0.0" y="0.0" width="204" height="450"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="204" height="410"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="66" rowSizeStyle="automatic" viewBased="YES" id="Kl1-pa-pJx">
-                                            <rect key="frame" x="0.0" y="0.0" width="204" height="450"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="204" height="410"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -886,7 +886,7 @@
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5YI-V9-cKF">
-                                                                    <rect key="frame" x="56" y="35" width="99" height="16"/>
+                                                                    <rect key="frame" x="56" y="37" width="99" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="ChatRoom 01" id="dF8-KE-3WO">
                                                                         <font key="font" usesAppearanceFont="YES"/>
@@ -895,7 +895,7 @@
                                                                     </textFieldCell>
                                                                 </textField>
                                                                 <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nhz-Fy-Tym">
-                                                                    <rect key="frame" x="7" y="9" width="40" height="45"/>
+                                                                    <rect key="frame" x="7" y="11" width="40" height="45"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSHomeTemplate" id="0i0-G1-wYZ"/>
                                                                     <userDefinedRuntimeAttributes>
@@ -907,7 +907,7 @@
                                                                     </userDefinedRuntimeAttributes>
                                                                 </imageView>
                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Kvw-9m-E9b">
-                                                                    <rect key="frame" x="56" y="11" width="113" height="16"/>
+                                                                    <rect key="frame" x="56" y="13" width="113" height="16"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" title="ericnth: Hello!" usesSingleLineMode="YES" id="76T-Gk-Lfs">
                                                                         <font key="font" metaFont="systemLight" size="13"/>
@@ -1161,20 +1161,49 @@ DQ
                                     </binding>
                                 </connections>
                             </splitView>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="KMs-12-Lnr">
+                                <rect key="frame" x="77" y="415" width="88" height="21"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="LandChat" id="aQn-Fy-DKg">
+                                    <font key="font" metaFont="systemBold" size="18"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <connections>
+                                    <binding destination="XfG-lQ-9wD" name="hidden" keyPath="isChatViewHidden" id="GLD-8w-sYL"/>
+                                </connections>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="yEf-eT-PHO">
+                                <rect key="frame" x="232" y="413" width="32" height="23"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="ckp-eG-8dy"/>
+                                </constraints>
+                                <buttonCell key="cell" type="roundTextured" bezelStyle="texturedRounded" image="NSAddTemplate" imagePosition="only" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="25h-SO-6M9">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="didClickMoreButton:" target="XfG-lQ-9wD" id="rVV-i1-qiM"/>
+                                    <binding destination="XfG-lQ-9wD" name="hidden" keyPath="isChatViewHidden" id="bnT-5l-zUO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="KMs-12-Lnr" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="14" id="6Vc-Tl-s1Q"/>
                             <constraint firstAttribute="bottom" secondItem="KIX-eL-P2n" secondAttribute="bottom" id="AGS-vr-Fup"/>
                             <constraint firstAttribute="bottom" secondItem="QHw-BO-ESS" secondAttribute="bottom" id="EUe-4v-BUm"/>
                             <constraint firstItem="QHw-BO-ESS" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="ICc-XD-epb"/>
                             <constraint firstItem="HHM-ac-zWP" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="QtI-fQ-Qed"/>
                             <constraint firstAttribute="bottom" secondItem="HHM-ac-zWP" secondAttribute="bottom" id="XRs-j4-UT2"/>
+                            <constraint firstItem="yEf-eT-PHO" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="15" id="aR3-6K-j6j"/>
                             <constraint firstAttribute="trailing" secondItem="HHM-ac-zWP" secondAttribute="trailing" id="boZ-3w-WoX"/>
                             <constraint firstItem="HHM-ac-zWP" firstAttribute="leading" secondItem="laR-zg-z44" secondAttribute="trailing" id="dpp-7G-TOG"/>
                             <constraint firstAttribute="bottom" secondItem="laR-zg-z44" secondAttribute="bottom" id="hEq-0C-TxF"/>
                             <constraint firstItem="laR-zg-z44" firstAttribute="leading" secondItem="QHw-BO-ESS" secondAttribute="trailing" id="jIJ-zl-UOF"/>
-                            <constraint firstItem="laR-zg-z44" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="kit-p1-AIo"/>
+                            <constraint firstItem="laR-zg-z44" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="40" id="kit-p1-AIo"/>
                             <constraint firstItem="KIX-eL-P2n" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="knu-sf-Flr"/>
+                            <constraint firstItem="KMs-12-Lnr" firstAttribute="leading" secondItem="QHw-BO-ESS" secondAttribute="trailing" constant="12" id="qEz-j3-RDi"/>
                             <constraint firstItem="QHw-BO-ESS" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" id="s3b-vJ-SAl"/>
+                            <constraint firstItem="HHM-ac-zWP" firstAttribute="leading" secondItem="yEf-eT-PHO" secondAttribute="trailing" constant="8" symbolic="YES" id="suT-dk-EGB"/>
                             <constraint firstItem="KIX-eL-P2n" firstAttribute="leading" secondItem="QHw-BO-ESS" secondAttribute="trailing" id="wpJ-V6-MKn"/>
                             <constraint firstAttribute="trailing" secondItem="KIX-eL-P2n" secondAttribute="trailing" id="xEw-34-QvL"/>
                         </constraints>
@@ -1277,6 +1306,7 @@ DQ
         </scene>
     </scenes>
     <resources>
+        <image name="NSAddTemplate" width="15" height="11"/>
         <image name="NSHomeTemplate" width="20" height="14"/>
         <image name="NSTouchBarNewMessageTemplate" width="17" height="14"/>
         <image name="NSTouchBarUserTemplate" width="15" height="12"/>

@@ -38,6 +38,12 @@ class LCViewController: NSViewController {
         }
     }
 
+    @IBAction func didClickMoreButton(_ sender: NSButton) {
+        let menu = NSMenu(title: "Menu")
+        menu.addItem(withTitle: "New Message", action: nil, keyEquivalent: "")
+        menu.addItem(withTitle: "About LandChat", action: #selector(NSApplication.orderFrontStandardAboutPanel(_:)), keyEquivalent: "")
+        menu.popUp(positioning: nil, at: sender.bounds.origin, in: sender)
+    }
 
 }
 

@@ -11,7 +11,7 @@ extension LCViewController {
     
     @IBAction func didClickTableView(_ sender: Any?) {
         
-        guard self.tableView.clickedRow >= 1 else {
+        guard self.tableView.clickedRow >= 0 else {
             return
         }
         
