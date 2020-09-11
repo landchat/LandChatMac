@@ -19,20 +19,16 @@ class LCViewController: NSViewController {
     @objc dynamic var isUserViewHidden = true
     
     
-    static let path = FileManager().urls(for: .libraryDirectory, in: .userDomainMask).first!.appendingPathComponent("LandChat").appendingPathComponent("Recent")
-    
     var recentChatRoomNumbers = [String]() {
         didSet {
-            NSKeyedArchiver.archiveRootObject(recentChatRoomNumbers, toFile: LCViewController.path.path)
+            UserDefaults.standard.set(self.recentChatRoomNumbers, forKey: "RecentChatrooms")
             self.tableView?.reloadData()
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        if let data = NSKeyedUnarchiver.unarchiveObject(withFile: LCViewController.path.path) as? [String] {
-            self.recentChatRoomNumbers = data
-        }
+        self.recentChatRoomNumbers = UserDefaults.standard.stringArray(forKey: "RecentChatrooms") ?? []
         // Do any additional setup after loading the view.
     }
 

@@ -5,7 +5,7 @@
 //  Created by 23786 on 2020/9/6.
 //
 
-import Cocoa
+/*import Cocoa
 
 class LCLandChatUser: NSObject, NSCoding {
     
@@ -44,3 +44,4 @@ class LCLandChatUser: NSObject, NSCoding {
     }
     
 }
+*/
