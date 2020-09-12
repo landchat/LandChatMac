@@ -862,7 +862,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="204" height="410"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnSelection="YES" multipleSelection="NO" autosaveColumns="NO" rowHeight="66" rowSizeStyle="automatic" viewBased="YES" id="Kl1-pa-pJx">
+                                        <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" columnResizing="NO" multipleSelection="NO" emptySelection="NO" autosaveColumns="NO" rowHeight="66" rowSizeStyle="automatic" viewBased="YES" id="Kl1-pa-pJx">
                                             <rect key="frame" x="0.0" y="0.0" width="204" height="410"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <size key="intercellSpacing" width="17" height="0.0"/>
@@ -964,13 +964,13 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                         <subviews>
                                             <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="53" horizontalPageScroll="10" verticalLineScroll="53" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omm-3s-X1K">
-                                                <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="329" height="290"/>
                                                 <clipView key="contentView" drawsBackground="NO" id="npJ-cQ-2bs">
-                                                    <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="329" height="290"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <subviews>
                                                         <tableView verticalHuggingPriority="750" allowsExpansionToolTips="YES" columnAutoresizingStyle="lastColumnOnly" multipleSelection="NO" autosaveColumns="NO" typeSelect="NO" rowHeight="53" rowSizeStyle="automatic" viewBased="YES" id="50W-kf-6B2">
-                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="331"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="329" height="290"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <size key="intercellSpacing" width="17" height="0.0"/>
                                                             <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -1084,9 +1084,21 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                 </scroller>
                                             </scrollView>
+                                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Prl-oW-idC">
+                                                <rect key="frame" x="13" y="298" width="104" height="19"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                                <textFieldCell key="cell" lineBreakMode="clipping" title="ChatRoom 01" id="Bm8-xL-y5V">
+                                                    <font key="font" metaFont="systemMedium" size="16"/>
+                                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                                </textFieldCell>
+                                                <connections>
+                                                    <binding destination="XfG-lQ-9wD" name="hidden" keyPath="isChatViewHidden" id="8vA-Kd-qDw"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
                                         <constraints>
-                                            <constraint firstItem="Omm-3s-X1K" firstAttribute="top" secondItem="OY5-27-nqi" secondAttribute="top" id="LuO-Sj-pm8"/>
+                                            <constraint firstItem="Omm-3s-X1K" firstAttribute="top" secondItem="OY5-27-nqi" secondAttribute="top" constant="41" id="LuO-Sj-pm8"/>
                                             <constraint firstAttribute="bottom" secondItem="Omm-3s-X1K" secondAttribute="bottom" id="Pni-h2-mcX"/>
                                             <constraint firstItem="Omm-3s-X1K" firstAttribute="leading" secondItem="OY5-27-nqi" secondAttribute="leading" id="rPW-QF-Beu"/>
                                             <constraint firstAttribute="trailing" secondItem="Omm-3s-X1K" secondAttribute="trailing" id="yDL-Mr-B8h"/>
@@ -1212,6 +1224,7 @@ DQ
                         <outlet property="chattingHistory" destination="50W-kf-6B2" id="urf-ug-6pb"/>
                         <outlet property="senderTextView" destination="Qrp-35-kQH" id="X9R-iF-9Wx"/>
                         <outlet property="tableView" destination="Kl1-pa-pJx" id="zp5-Ik-8fr"/>
+                        <outlet property="titleLabel" destination="Prl-oW-idC" id="Zig-eN-yUL"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

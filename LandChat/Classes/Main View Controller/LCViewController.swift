@@ -12,6 +12,7 @@ class LCViewController: NSViewController {
     @IBOutlet weak var tableView: NSTableView!
     @IBOutlet weak var senderTextView: NSTextView!
     @IBOutlet weak var chattingHistory: NSTableView!
+    @IBOutlet weak var titleLabel: NSTextField!
     
     var currentChattingGroup: LCChattingMessageGroup!
     
@@ -19,16 +20,16 @@ class LCViewController: NSViewController {
     @objc dynamic var isUserViewHidden = true
     
     
-    var recentChatRoomNumbers = [String]() {
+    var recentChatrooms = [String]() {
         didSet {
-            UserDefaults.standard.set(self.recentChatRoomNumbers, forKey: "RecentChatrooms")
+            UserDefaults.standard.set(self.recentChatrooms, forKey: "RecentChatrooms")
             self.tableView?.reloadData()
         }
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.recentChatRoomNumbers = UserDefaults.standard.stringArray(forKey: "RecentChatrooms") ?? []
+        self.recentChatrooms = UserDefaults.standard.stringArray(forKey: "RecentChatrooms") ?? []
         // Do any additional setup after loading the view.
     }
 
@@ -40,7 +41,7 @@ class LCViewController: NSViewController {
 
     @IBAction func didClickMoreButton(_ sender: NSButton) {
         let menu = NSMenu(title: "Menu")
-        menu.addItem(withTitle: "New Message", action: nil, keyEquivalent: "")
+        menu.addItem(withTitle: "New Message", action: #selector(newMessage(_:)), keyEquivalent: "")
         menu.addItem(withTitle: "About LandChat", action: #selector(NSApplication.orderFrontStandardAboutPanel(_:)), keyEquivalent: "")
         menu.popUp(positioning: nil, at: sender.bounds.origin, in: sender)
     }

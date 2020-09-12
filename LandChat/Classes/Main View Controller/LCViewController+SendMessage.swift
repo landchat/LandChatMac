@@ -7,13 +7,13 @@
 
 import Cocoa
 
-extension LCViewController {
+extension LCViewController: LCNewMessageViewControllerDelegate {
     
     @IBAction func sendMessage(_ sender: Any?) {
         
         let message = self.senderTextView.string
         self.senderTextView.string = ""
-        let url = URL(string: "http://landchat.ericnth.cn/addmsg.php?id=\(UserDefaults.standard.string(forKey: "LoginUserID") ?? "Unknown")&room=\(self.recentChatRoomNumbers[self.tableView.selectedRow - 1])&msg=\(message)&pwd=\(UserDefaults.standard.string(forKey: "LoginPassword") ?? "")&app_id=mE1aF6cH0jC0jC5pA0lA0cB1kE0cC5".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+        let url = URL(string: "http://landchat.ericnth.cn/addmsg.php?id=\(UserDefaults.standard.string(forKey: "LoginUserID") ?? "Unknown")&room=\(self.recentChatrooms[self.tableView.selectedRow - 1])&msg=\(message)&pwd=\(UserDefaults.standard.string(forKey: "LoginPassword") ?? "")&app_id=mE1aF6cH0jC0jC5pA0lA0cB1kE0cC5".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             if error == nil && data != nil {
@@ -29,33 +29,16 @@ extension LCViewController {
             }
         }
         task.resume()
-        /*let url = URL(string: "http://landchat.ericnth.cn/addmsg.php?usr=\(LCLandChatUser.current?.nickname ?? "UnknownUser")&room=\(self.sendToWhich.stringValue)&msg=\(message)".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
-        let task = URLSession.shared.dataTask(with: url) {
-            (data, response, error) in
-            if error == nil && data != nil {
-                if let res = String(data: data!, encoding: .utf8) {
-                    if res != "Succeed" {
-                        print("Error")
-                    }
-                } else {
-                    print("Error")
-                }
-            } else {
-                print("Error")
-            }
-        }
-        task.resume()
         
-        if self.tableView.selectedRow >= 1 {
-            self.recentChatRoomNumbers.remove(at: self.tableView.selectedRow - 1)
-        } else {
-            if self.recentChatRoomNumbers.contains(self.sendToWhich.stringValue) {
-                self.recentChatRoomNumbers.remove(at: self.recentChatRoomNumbers.firstIndex(of: self.sendToWhich.stringValue)!)
-            }
-        }
-        self.recentChatRoomNumbers.insert(self.sendToWhich.stringValue, at: 0)
-        self.tableView?.selectRowIndexes(IndexSet(arrayLiteral: 1), byExtendingSelection: false)
-        */
+    }
+    
+    @IBAction func newMessage(_ sender: Any?) {
+        self.presentAsSheet( LCNewMessageViewController(delegate: self) )
+    }
+    
+    func newMessageViewControllerSendMessageSucceed(chatroomName: String) {
+        self.recentChatrooms.insert(chatroomName, at: 0)
+        UserDefaults.standard.setValue(self.recentChatrooms, forKey: "RecentChatrooms")
     }
     
 }

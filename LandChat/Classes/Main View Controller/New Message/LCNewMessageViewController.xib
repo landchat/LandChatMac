@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="17132.0.2" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="17132.0.2"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="LCNewMessageViewController" customModule="LandChat" customModuleProvider="target">
+            <connections>
+                <outlet property="chatroomName" destination="PTQ-rN-kVw" id="MkD-Yy-wSG"/>
+                <outlet property="message" destination="2DS-sv-A49" id="9Ms-se-Prq"/>
+                <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customView id="Hz6-mo-xeY">
+            <rect key="frame" x="0.0" y="0.0" width="335" height="272"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="CKg-2T-ZG9">
+                    <rect key="frame" x="18" y="233" width="68" height="19"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="19" id="NBi-vm-UV1"/>
+                        <constraint firstAttribute="width" constant="64" id="cEC-X1-b5H"/>
+                    </constraints>
+                    <textFieldCell key="cell" lineBreakMode="clipping" title="Send To:" id="VZG-f4-gkj">
+                        <font key="font" metaFont="system" size="16"/>
+                        <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="PTQ-rN-kVw">
+                    <rect key="frame" x="98" y="232" width="217" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="217" id="Ir6-xV-QMy"/>
+                        <constraint firstAttribute="height" constant="21" id="N7S-Wu-RTd"/>
+                    </constraints>
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" placeholderString="Chatroom Name" drawsBackground="YES" id="cSX-hk-J9f">
+                        <font key="font" metaFont="system"/>
+                        <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                        <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                    </textFieldCell>
+                </textField>
+                <scrollView borderType="groove" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Odx-c4-KgS">
+                    <rect key="frame" x="20" y="55" width="295" height="161"/>
+                    <clipView key="contentView" drawsBackground="NO" id="wZ9-MZ-2Kd">
+                        <rect key="frame" x="2" y="2" width="291" height="157"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView importsGraphics="NO" richText="NO" verticallyResizable="YES" smartInsertDelete="YES" id="2DS-sv-A49">
+                                <rect key="frame" x="0.0" y="0.0" width="291" height="157"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                <color key="backgroundColor" white="1" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <size key="minSize" width="291" height="157"/>
+                                <size key="maxSize" width="307" height="10000000"/>
+                                <attributedString key="textStorage">
+                                    <fragment content="Type your message here">
+                                        <attributes>
+                                            <color key="NSColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                            <font key="NSFont" metaFont="systemLight" size="14"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <color key="insertionPointColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                            </textView>
+                        </subviews>
+                    </clipView>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="295" id="lf2-Kb-bCB"/>
+                        <constraint firstAttribute="height" constant="161" id="rf0-5H-kfP"/>
+                    </constraints>
+                    <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="byY-dj-9cX">
+                        <rect key="frame" x="-100" y="-100" width="240" height="16"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                    <scroller key="verticalScroller" wantsLayer="YES" verticalHuggingPriority="750" horizontal="NO" id="5lg-rM-ee6">
+                        <rect key="frame" x="277" y="2" width="16" height="157"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </scroller>
+                </scrollView>
+                <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="azR-gA-2oc">
+                    <rect key="frame" x="227" y="18" width="89" height="23"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="20" id="W1M-oU-sQ9"/>
+                        <constraint firstAttribute="width" constant="87" id="WgU-zi-OXb"/>
+                    </constraints>
+                    <buttonCell key="cell" type="roundTextured" title="Send" bezelStyle="texturedRounded" image="NSTouchBarMailTemplate" imagePosition="left" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hwA-74-HJr">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                    <connections>
+                        <action selector="sendMessage:" target="-2" id="mip-hY-Zi0"/>
+                    </connections>
+                </button>
+            </subviews>
+            <constraints>
+                <constraint firstItem="Odx-c4-KgS" firstAttribute="top" secondItem="CKg-2T-ZG9" secondAttribute="bottom" constant="17" id="0Pq-RE-EoL"/>
+                <constraint firstAttribute="trailing" secondItem="Odx-c4-KgS" secondAttribute="trailing" constant="20" symbolic="YES" id="2l7-VK-Tsq"/>
+                <constraint firstAttribute="trailing" secondItem="PTQ-rN-kVw" secondAttribute="trailing" constant="20" symbolic="YES" id="5Yr-JD-4Re"/>
+                <constraint firstItem="azR-gA-2oc" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="228" id="6iJ-9b-F7s"/>
+                <constraint firstItem="PTQ-rN-kVw" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="19" id="DVI-ei-X0O"/>
+                <constraint firstAttribute="bottom" secondItem="azR-gA-2oc" secondAttribute="bottom" constant="20" symbolic="YES" id="IGw-MC-g7C"/>
+                <constraint firstItem="CKg-2T-ZG9" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="ImV-sd-M26"/>
+                <constraint firstItem="Odx-c4-KgS" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="20" symbolic="YES" id="LWc-ou-VX5"/>
+                <constraint firstItem="azR-gA-2oc" firstAttribute="top" secondItem="Odx-c4-KgS" secondAttribute="bottom" constant="15" id="N83-c0-Tfy"/>
+                <constraint firstAttribute="trailing" secondItem="azR-gA-2oc" secondAttribute="trailing" constant="20" symbolic="YES" id="X2G-uR-ANE"/>
+                <constraint firstItem="CKg-2T-ZG9" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" symbolic="YES" id="gta-ja-poC"/>
+                <constraint firstItem="Odx-c4-KgS" firstAttribute="top" secondItem="PTQ-rN-kVw" secondAttribute="bottom" constant="16" id="o3K-Oo-Bh0"/>
+                <constraint firstItem="PTQ-rN-kVw" firstAttribute="leading" secondItem="CKg-2T-ZG9" secondAttribute="trailing" constant="14" id="uBj-ZF-YS2"/>
+            </constraints>
+            <point key="canvasLocation" x="-221.5" y="135"/>
+        </customView>
+    </objects>
+    <resources>
+        <image name="NSTouchBarMailTemplate" width="19" height="11"/>
+    </resources>
+</document>
