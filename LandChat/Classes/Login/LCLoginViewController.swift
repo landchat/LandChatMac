@@ -19,11 +19,11 @@ class LCLoginViewController: NSViewController {
         self.view.window?.center()
         self.passwordField.stringValue = UserDefaults.standard.string(forKey: "LoginPassword") ?? ""
         self.userID.stringValue = UserDefaults.standard.string(forKey: "LoginUserID") ?? ""
-        self.imageView.image = UserDefaults.standard.object(forKey: "UserAvatarImage") as? NSImage
         
     }
     
     @IBAction func login(_ sender: Any?) {
+        
         LCLoginRequestResult.isPasswordRight(passwordField.stringValue, uid: Int(userID.stringValue) ?? -1) { (succeed, result) in
             DispatchQueue.main.async {
                 if succeed {
@@ -48,6 +48,7 @@ class LCLoginViewController: NSViewController {
                 }
             }
         }
+        
     }
     
 }

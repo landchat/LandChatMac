@@ -46,6 +46,12 @@ class LCViewController: NSViewController {
         menu.addItem(withTitle: "About LandChat", action: #selector(NSApplication.orderFrontStandardAboutPanel(_:)), keyEquivalent: "")
         menu.popUp(positioning: nil, at: sender.bounds.origin, in: sender)
     }
+    
+    @IBAction func logOut(_ sender: Any?) {
+        let vc = NSStoryboard(name: "Main", bundle: nil).instantiateController(withIdentifier: "Login") as! NSWindowController
+        vc.showWindow(nil)
+        self.view.window?.close()
+    }
 
 }
 

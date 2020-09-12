@@ -37,4 +37,12 @@ extension LCViewController: NSTableViewDataSource, NSTableViewDelegate {
         return nil
     }
     
+    @IBAction func delete(_ sender: Any?) {
+        guard self.tableView.clickedRow >= 0 else {
+            return
+        }
+        self.recentChatrooms.remove(at: self.tableView.clickedRow)
+        UserDefaults.standard.setValue(self.recentChatrooms, forKey: "RecentChatrooms")
+    }
+    
 }

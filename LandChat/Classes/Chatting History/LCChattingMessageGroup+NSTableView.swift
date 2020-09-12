@@ -42,4 +42,8 @@ extension LCChattingMessageGroup: NSTableViewDelegate, NSTableViewDataSource {
         return nil
     }
     
+    func selectionShouldChange(in tableView: NSTableView) -> Bool {
+        return false
+    }
+    
 }
