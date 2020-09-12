@@ -15,7 +15,6 @@ class LCLoginRequestResult: NSObject, Codable {
     static func isPasswordRight(_ password: String, uid: Int, completionHandler: @escaping (Bool, LCLoginRequestResult?) -> (Void) ) {
         
         let url = URL(string: "http://landchat.ericnth.cn/checkkey.php?id=\(uid)&pwd=\(password)")!
-        print(url.absoluteString)
         let task = URLSession.shared.dataTask(with: url) { data, result, error in
             if data != nil && error == nil {
                 do {
