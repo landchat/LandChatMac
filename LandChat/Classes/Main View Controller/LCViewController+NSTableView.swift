@@ -30,8 +30,8 @@ extension LCViewController: NSTableViewDataSource, NSTableViewDelegate {
             // view.imageView?.wantsLayer = true
             view.imageView?.layer?.backgroundColor = .white
             view.imageView?.setNeedsDisplay()
-            view.textField?.stringValue = "Chatroom \(self.recentChatrooms[row])"
-            view.recentMessageLabel?.stringValue = "Test"
+            view.textField?.stringValue = self.recentChatrooms[row]
+            view.recentMessageLabel?.stringValue = ""
             return view
         }
         return nil

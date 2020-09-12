@@ -9,15 +9,9 @@ import Cocoa
 
 extension LCViewController {
     
-    @IBAction func didClickTableView(_ sender: Any?) {
+    func loadMessageGroup(ofName name: String) {
         
-        guard self.tableView.clickedRow >= 0 else {
-            return
-        }
-        
-        let clickedRow = self.tableView.clickedRow
-        
-        LCChattingMessageGroup.messageGroup(ofName: "\(self.recentChatrooms[clickedRow])") {
+        LCChattingMessageGroup.messageGroup(ofName: "\(name)") {
             (bool, result) in
             DispatchQueue.main.async {
                 if bool {
@@ -26,7 +20,7 @@ extension LCViewController {
                         self.chattingHistory.dataSource = self.currentChattingGroup
                         self.chattingHistory.delegate = self.currentChattingGroup
                         self.chattingHistory.reloadData()
-                        self.titleLabel.stringValue = self.recentChatrooms[clickedRow]
+                        self.titleLabel.stringValue = name
                         self.chattingHistory.enclosingScrollView?.scroll(
                             self.chattingHistory.enclosingScrollView!.contentView,
                             to: NSMakePoint(0,
@@ -42,6 +36,17 @@ extension LCViewController {
                 }
             }
         }
+        
+    }
+    
+    @IBAction func didClickTableView(_ sender: Any?) {
+        
+        guard self.tableView.clickedRow >= 0 else {
+            return
+        }
+        
+        let clickedRow = self.tableView.clickedRow
+        self.loadMessageGroup(ofName: self.recentChatrooms[clickedRow])
         
     }
     
