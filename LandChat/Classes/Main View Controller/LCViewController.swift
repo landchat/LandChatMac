@@ -29,8 +29,9 @@ class LCViewController: NSViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.recentChatrooms = UserDefaults.standard.stringArray(forKey: "RecentChatrooms") ?? []
-        // Do any additional setup after loading the view.
+        
     }
 
     override var representedObject: Any? {

@@ -11,10 +11,10 @@ extension NSViewController {
     
     func showAlert(_ title: String, _ message: String) {
         
-    /*    guard self.view.window != nil else {
+        guard self.view.window != nil else {
             return
         }
-   */
+   
         let alert = NSAlert()
         alert.messageText = title
         alert.alertStyle = .informational
