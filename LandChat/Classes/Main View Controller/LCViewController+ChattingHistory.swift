@@ -25,6 +25,7 @@ extension LCViewController: LCChattingMessageReceiverDelegate {
                     self.chattingHistory.enclosingScrollView!.bounds.height
                 )
             )
+            self.chattingHistory.enclosingScrollView?.reflectScrolledClipView(self.chattingHistory.enclosingScrollView!.contentView)
             
         }
         

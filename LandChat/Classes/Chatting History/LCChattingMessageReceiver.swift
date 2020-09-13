@@ -13,7 +13,12 @@ protocol LCChattingMessageReceiverDelegate {
 
 class LCChattingMessageReceiver: NSObject {
     
-    var chatroomName: String
+    var chatroomName: String {
+        didSet {
+            self.historyResult = nil
+        }
+    }
+    
     var queue: DispatchQueue?
     var delegate: LCChattingMessageReceiverDelegate?
     var historyResult: LCChattingMessageGroup?
@@ -27,7 +32,7 @@ class LCChattingMessageReceiver: NSObject {
     
     func validate() {
         
-        self.timer = Timer(fire: Date(), interval: 1.0, repeats: true, block: { (timer) in
+        self.timer = Timer(fire: Date(), interval: 0.8, repeats: true, block: { (timer) in
             
             LCChattingMessageGroup.messageGroup(ofName: self.chatroomName) {
                 (bool, result) in
@@ -39,7 +44,7 @@ class LCChattingMessageReceiver: NSObject {
                 }
                 self.queue?.async {
                     if self.historyResult != nil {
-                        if result!.messages != self.historyResult!.messages {
+                        if result!.messages!.count != self.historyResult!.messages!.count {
                             self.historyResult = result
                             self.delegate?.messageReceiverReceivedNewMessage(inChatroom: self.chatroomName, messageGroup: result!)
                         }
