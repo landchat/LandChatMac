@@ -7,10 +7,34 @@
 
 import Cocoa
 
-extension LCViewController {
+extension LCViewController: LCChattingMessageReceiverDelegate {
+    
+    func messageReceiverReceivedNewMessage(inChatroom room: String, messageGroup: LCChattingMessageGroup) {
+        
+        DispatchQueue.main.async {
+            
+            self.currentChattingGroup = messageGroup
+            self.chattingHistory.delegate = self.currentChattingGroup
+            self.chattingHistory.dataSource = self.currentChattingGroup
+            self.chattingHistory.reloadData()
+            self.titleLabel.stringValue = room
+            self.chattingHistory.enclosingScrollView?.scroll(
+                self.chattingHistory.enclosingScrollView!.contentView,
+                to: NSMakePoint(0,
+                    self.chattingHistory.bounds.height -
+                    self.chattingHistory.enclosingScrollView!.bounds.height
+                )
+            )
+            
+        }
+        
+        
+    }
     
     func loadMessageGroup(ofName name: String) {
         
+        self.messageReceiver.chatroomName = name
+        /*
         LCChattingMessageGroup.messageGroup(ofName: "\(name)") {
             (bool, result) in
             DispatchQueue.main.async {
@@ -36,7 +60,7 @@ extension LCViewController {
                 }
             }
         }
-        
+        */
     }
     
     @IBAction func didClickTableView(_ sender: Any?) {

@@ -15,6 +15,7 @@ class LCViewController: NSViewController {
     @IBOutlet weak var titleLabel: NSTextField!
     
     var currentChattingGroup: LCChattingMessageGroup!
+    var messageReceiver: LCChattingMessageReceiver!
     
     @objc dynamic var isChatViewHidden = false
     @objc dynamic var isUserViewHidden = true
@@ -31,6 +32,16 @@ class LCViewController: NSViewController {
         super.viewDidLoad()
         
         self.recentChatrooms = UserDefaults.standard.stringArray(forKey: "RecentChatrooms") ?? []
+        
+        if !self.recentChatrooms.isEmpty {
+            
+            let receiver = LCChattingMessageReceiver(chatroomName: self.recentChatrooms[0])
+            receiver.delegate = self
+            receiver.validate()
+            self.messageReceiver = receiver
+            
+        }
+        
         
     }
 

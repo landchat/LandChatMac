@@ -22,6 +22,7 @@
 		18D24913250BA61D00594143 /* LCNewMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D24911250BA61D00594143 /* LCNewMessageViewController.xib */; };
 		18E75E77250C8B3C00DBD5E4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E75E76250C8B3C00DBD5E4 /* Notification.swift */; };
 		18E75E79250C8BF300DBD5E4 /* LCWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E75E78250C8BF300DBD5E4 /* LCWindowController.swift */; };
+		18E75E7D250D17EA00DBD5E4 /* LCChattingMessageReceiver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E75E7C250D17EA00DBD5E4 /* LCChattingMessageReceiver.swift */; };
 		18F8C8252508E7AC001CCC0C /* LCLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C8242508E7AC001CCC0C /* LCLoginViewController.swift */; };
 		18F8C8272508EB46001CCC0C /* LCLoginRequestResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C8262508EB46001CCC0C /* LCLoginRequestResult.swift */; };
 		18F8C8292508F649001CCC0C /* NSViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F8C8282508F649001CCC0C /* NSViewController.swift */; };
@@ -50,6 +51,7 @@
 		18D24911250BA61D00594143 /* LCNewMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LCNewMessageViewController.xib; sourceTree = "<group>"; };
 		18E75E76250C8B3C00DBD5E4 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
 		18E75E78250C8BF300DBD5E4 /* LCWindowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCWindowController.swift; sourceTree = "<group>"; };
+		18E75E7C250D17EA00DBD5E4 /* LCChattingMessageReceiver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCChattingMessageReceiver.swift; sourceTree = "<group>"; };
 		18F8C8242508E7AC001CCC0C /* LCLoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCLoginViewController.swift; sourceTree = "<group>"; };
 		18F8C8262508EB46001CCC0C /* LCLoginRequestResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCLoginRequestResult.swift; sourceTree = "<group>"; };
 		18F8C8282508F649001CCC0C /* NSViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSViewController.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			isa = PBXGroup;
 			children = (
 				18F8C82B2508FB22001CCC0C /* LCChattingMessage.swift */,
+				18E75E7C250D17EA00DBD5E4 /* LCChattingMessageReceiver.swift */,
 				18F8C82D2508FC30001CCC0C /* LCChattingMessageGroup.swift */,
 				18F8C82F2508FEB7001CCC0C /* LCChattingMessageGroup+NSTableView.swift */,
 			);
@@ -243,6 +246,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18E75E7D250D17EA00DBD5E4 /* LCChattingMessageReceiver.swift in Sources */,
 				18D24912250BA61D00594143 /* LCNewMessageViewController.swift in Sources */,
 				182769BC250375B800711684 /* LCViewController+ChattingHistory.swift in Sources */,
 				182769AA250319C400711684 /* LCViewController.swift in Sources */,
