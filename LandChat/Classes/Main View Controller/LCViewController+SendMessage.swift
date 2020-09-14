@@ -30,7 +30,7 @@ extension LCViewController: LCNewMessageViewControllerDelegate {
         }
         task.resume()
         
-        self.loadMessageGroup(ofName: self.recentChatrooms[self.tableView.selectedRow])
+        self.messageReceiver.request()
         
     }
     

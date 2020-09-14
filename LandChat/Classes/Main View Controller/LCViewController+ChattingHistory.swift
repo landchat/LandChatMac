@@ -35,6 +35,7 @@ extension LCViewController: LCChattingMessageReceiverDelegate {
     func loadMessageGroup(ofName name: String) {
         
         self.messageReceiver.chatroomName = name
+        self.messageReceiver.request()
         /*
         LCChattingMessageGroup.messageGroup(ofName: "\(name)") {
             (bool, result) in
