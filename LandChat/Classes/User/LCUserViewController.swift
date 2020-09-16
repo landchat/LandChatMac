@@ -12,20 +12,12 @@ class LCUserViewController: NSViewController {
     @IBOutlet weak var avatarImage: NSImageView!
     @IBOutlet weak var nameTextField: NSTextField!
     @IBOutlet weak var uidLabel: NSTextField!
+    @IBOutlet weak var emailLabel: NSTextField!
+    @IBOutlet weak var avatarUrlLabel: NSTextField!
     @objc dynamic var isEditing = false
     
     @IBAction func editOrDone(_ sender: NSButton?) {
         self.isEditing = !isEditing
-        if self.isEditing {
-            self.nameTextField.isEditable = true
-            self.nameTextField.becomeFirstResponder()
-            sender?.title = "Done"
-        } else {
-            self.nameTextField.resignFirstResponder()
-            self.nameTextField.isEditable = false
-            // yUserDefaults.standard.set( self.nameTextField.stringValue, forKey: "UserNickName" )
-            sender?.title = "Edit"
-        }
     }
     
     @IBAction func chooseImage(_ sender: Any?) {
@@ -42,8 +34,8 @@ class LCUserViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.nameTextField.stringValue = UserDefaults.standard.string(forKey: "UserName") ?? "Unknown User"
-        self.uidLabel.stringValue = "LandChat User ID: " + ( UserDefaults.standard.string(forKey: "LoginUserID") ?? "Unknown" )
+        self.nameTextField.stringValue = "Welcome, " + ( UserDefaults.standard.string(forKey: "UserName") ?? "Unknown User" )
+        self.uidLabel.stringValue = UserDefaults.standard.string(forKey: "LoginUserID") ?? "Unknown"
         
     }
     

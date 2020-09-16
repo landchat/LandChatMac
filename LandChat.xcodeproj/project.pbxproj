@@ -19,6 +19,9 @@
 		182769C62504B4A000711684 /* LCUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769C52504B4A000711684 /* LCUserViewController.swift */; };
 		182769CA2504B9FB00711684 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769C92504B9FB00711684 /* NSImage.swift */; };
 		18CA7E0D2512247C003827DF /* LCWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA7E0C2512247C003827DF /* LCWindow.swift */; };
+		18CA7E1025122B0A003827DF /* LCGetInputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA7E0E25122B0A003827DF /* LCGetInputViewController.swift */; };
+		18CA7E1125122B0A003827DF /* LCGetInputViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18CA7E0F25122B0A003827DF /* LCGetInputViewController.xib */; };
+		18CA7E1325122B63003827DF /* LCUserViewController+EditInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA7E1225122B63003827DF /* LCUserViewController+EditInformation.swift */; };
 		18D24912250BA61D00594143 /* LCNewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D24910250BA61D00594143 /* LCNewMessageViewController.swift */; };
 		18D24913250BA61D00594143 /* LCNewMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D24911250BA61D00594143 /* LCNewMessageViewController.xib */; };
 		18E75E77250C8B3C00DBD5E4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E75E76250C8B3C00DBD5E4 /* Notification.swift */; };
@@ -49,6 +52,9 @@
 		182769C52504B4A000711684 /* LCUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCUserViewController.swift; sourceTree = "<group>"; };
 		182769C92504B9FB00711684 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
 		18CA7E0C2512247C003827DF /* LCWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCWindow.swift; sourceTree = "<group>"; };
+		18CA7E0E25122B0A003827DF /* LCGetInputViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LCGetInputViewController.swift; sourceTree = "<group>"; };
+		18CA7E0F25122B0A003827DF /* LCGetInputViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LCGetInputViewController.xib; sourceTree = "<group>"; };
+		18CA7E1225122B63003827DF /* LCUserViewController+EditInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "LCUserViewController+EditInformation.swift"; path = "../../../../../LCUserViewController+EditInformation.swift"; sourceTree = "<group>"; };
 		18D24910250BA61D00594143 /* LCNewMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCNewMessageViewController.swift; sourceTree = "<group>"; };
 		18D24911250BA61D00594143 /* LCNewMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LCNewMessageViewController.xib; sourceTree = "<group>"; };
 		18E75E76250C8B3C00DBD5E4 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -134,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				182769C52504B4A000711684 /* LCUserViewController.swift */,
+				18CA7E1225122B63003827DF /* LCUserViewController+EditInformation.swift */,
 				182769BE2504A21A00711684 /* LCLandChatUser.swift */,
 			);
 			path = User;
@@ -142,6 +149,8 @@
 		182769C82504B9EE00711684 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				18CA7E0E25122B0A003827DF /* LCGetInputViewController.swift */,
+				18CA7E0F25122B0A003827DF /* LCGetInputViewController.xib */,
 				182769C92504B9FB00711684 /* NSImage.swift */,
 				18F8C8282508F649001CCC0C /* NSViewController.swift */,
 				18E75E76250C8B3C00DBD5E4 /* Notification.swift */,
@@ -239,6 +248,7 @@
 				182769AC250319C400711684 /* Assets.xcassets in Resources */,
 				182769AF250319C400711684 /* Main.storyboard in Resources */,
 				18D24913250BA61D00594143 /* LCNewMessageViewController.xib in Resources */,
+				18CA7E1125122B0A003827DF /* LCGetInputViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,12 +269,14 @@
 				18F8C82C2508FB22001CCC0C /* LCChattingMessage.swift in Sources */,
 				18CA7E0D2512247C003827DF /* LCWindow.swift in Sources */,
 				182769CA2504B9FB00711684 /* NSImage.swift in Sources */,
+				18CA7E1025122B0A003827DF /* LCGetInputViewController.swift in Sources */,
 				182769BA2503665400711684 /* LCViewController+SendMessage.swift in Sources */,
 				18F8C8252508E7AC001CCC0C /* LCLoginViewController.swift in Sources */,
 				182769A8250319C400711684 /* LCAppDelegate.swift in Sources */,
 				18F8C8272508EB46001CCC0C /* LCLoginRequestResult.swift in Sources */,
 				182769BF2504A21A00711684 /* LCLandChatUser.swift in Sources */,
 				18F8C8292508F649001CCC0C /* NSViewController.swift in Sources */,
+				18CA7E1325122B63003827DF /* LCUserViewController+EditInformation.swift in Sources */,
 				18F8C8302508FEB7001CCC0C /* LCChattingMessageGroup+NSTableView.swift in Sources */,
 				182769B825031EDC00711684 /* LCViewController+NSTableView.swift in Sources */,
 				18E75E79250C8BF300DBD5E4 /* LCWindowController.swift in Sources */,

@@ -944,9 +944,12 @@ DQ
                         <rect key="frame" x="0.0" y="0.0" width="533" height="450"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hu2-aM-scn">
-                                <rect key="frame" x="20" y="284" width="80" height="80"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hu2-aM-scn">
+                                <rect key="frame" x="20" y="273" width="80" height="80"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="80" id="KWf-nB-MTa"/>
+                                    <constraint firstAttribute="height" constant="80" id="kQO-qd-yUF"/>
+                                </constraints>
                                 <imageCell key="cell" refusesFirstResponder="YES" alignment="left" imageScaling="proportionallyUpOrDown" image="NSUser" id="Nax-gF-4yv"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="wantsLayer" value="YES"/>
@@ -956,18 +959,19 @@ DQ
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-uJ-XMq">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="kTQ-uJ-XMq">
                                 <rect key="frame" x="18" y="393" width="62" height="47"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                 <textFieldCell key="cell" lineBreakMode="clipping" title="Me" id="kLj-kn-g3w">
                                     <font key="font" metaFont="systemBold" size="40"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmn-wB-9Qt">
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="dmn-wB-9Qt">
                                 <rect key="frame" x="100" y="401" width="54" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="52" id="QXE-Wg-1iI"/>
+                                </constraints>
                                 <buttonCell key="cell" type="roundTextured" title="Edit" bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="hNN-yl-rs2">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
@@ -976,46 +980,140 @@ DQ
                                     <action selector="editOrDone:" target="RQA-4z-Rgf" id="EK3-p0-OIo"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="T21-5W-YgD">
-                                <rect key="frame" x="26" y="254" width="68" height="23"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <buttonCell key="cell" type="roundTextured" title="Choose..." bezelStyle="texturedRounded" alignment="center" lineBreakMode="truncatingTail" state="on" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="aeq-DT-qLc">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                                <connections>
-                                    <action selector="chooseImage:" target="RQA-4z-Rgf" id="1wu-fm-vtv"/>
-                                    <binding destination="RQA-4z-Rgf" name="hidden" keyPath="isEditing" id="MK6-of-81x">
-                                        <dictionary key="options">
-                                            <string key="NSValueTransformerName">NSNegateBoolean</string>
-                                        </dictionary>
-                                    </binding>
-                                </connections>
-                            </button>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="v1z-hl-2bQ">
-                                <rect key="frame" x="115" y="296" width="400" height="16"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="LandChat User ID: 0" id="h7Y-Gr-wob">
-                                    <font key="font" metaFont="system"/>
-                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Ine-VC-liJ">
-                                <rect key="frame" x="114" y="326" width="401" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Name" id="XQ9-X6-lp3">
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ine-VC-liJ">
+                                <rect key="frame" x="114" y="302" width="136" height="21"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Welcome, Name" id="XQ9-X6-lp3">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hIj-QV-ZxM">
+                                <rect key="frame" x="30" y="201" width="200" height="19"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="My personal information" id="ceY-vP-vne">
+                                    <font key="font" metaFont="systemHeavy" size="16"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kzx-X6-9bL">
+                                <rect key="frame" x="29" y="175" width="43" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Email:" id="wbM-4H-YTC">
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rF9-vY-IGM">
+                                <rect key="frame" x="188" y="175" width="295" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" title="email" id="ZBh-z0-D0e">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="F2x-GI-W4o">
+                                <rect key="frame" x="29" y="151" width="71" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Avatar Url:" id="KIw-6Q-phO">
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="SqF-oc-ZDw">
+                                <rect key="frame" x="189" y="151" width="294" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="truncatingTail" title="avatar url" id="uWu-gW-5eL">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rQB-RC-k4f">
+                                <rect key="frame" x="189" y="127" width="294" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="uid" id="1E2-mD-FvX">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="UsH-GG-1WF">
+                                <rect key="frame" x="31" y="20" width="151" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="LandChat for Mac   1.0.0" id="B8C-sI-5m7">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="secondaryLabelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="faC-ic-pxa">
+                                <rect key="frame" x="29" y="127" width="55" height="16"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="User ID:" id="La0-qE-Pjf">
+                                    <font key="font" metaFont="systemSemibold" size="13"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Co6-re-Ohh">
+                                <rect key="frame" x="254" y="300" width="24" height="26"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="24" id="IKJ-s2-hPc"/>
+                                    <constraint firstAttribute="height" constant="22" id="RKh-QI-o4U"/>
+                                </constraints>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSTouchBarComposeTemplate" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="1wE-sh-MdK">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="editName:" target="RQA-4z-Rgf" id="sa8-1t-BOM"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q7d-Ks-eHi">
+                                <rect key="frame" x="489" y="171" width="24" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSTouchBarComposeTemplate" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="VXr-2s-OIU">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="editEmail:" target="RQA-4z-Rgf" id="BGw-SF-Iyf"/>
+                                </connections>
+                            </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Jsl-ti-iuL">
+                                <rect key="frame" x="489" y="147" width="24" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="bevel" bezelStyle="regularSquare" image="NSTouchBarComposeTemplate" imagePosition="overlaps" alignment="center" imageScaling="proportionallyDown" inset="2" id="C7j-qb-uOv">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="editAvatarUrl:" target="RQA-4z-Rgf" id="EBl-Cq-Y1e"/>
+                                </connections>
+                            </button>
                         </subviews>
+                        <constraints>
+                            <constraint firstItem="Ine-VC-liJ" firstAttribute="leading" secondItem="hu2-aM-scn" secondAttribute="trailing" constant="16" id="31h-3h-hJZ"/>
+                            <constraint firstItem="kTQ-uJ-XMq" firstAttribute="top" secondItem="w8X-rB-KcR" secondAttribute="top" constant="10" id="BfA-G0-Mxp"/>
+                            <constraint firstItem="Co6-re-Ohh" firstAttribute="top" secondItem="w8X-rB-KcR" secondAttribute="top" constant="127" id="DHA-kG-ChA"/>
+                            <constraint firstItem="dmn-wB-9Qt" firstAttribute="top" secondItem="w8X-rB-KcR" secondAttribute="top" constant="27" id="Fem-lT-tU7"/>
+                            <constraint firstItem="hu2-aM-scn" firstAttribute="top" secondItem="kTQ-uJ-XMq" secondAttribute="bottom" constant="40" id="Gmr-e9-XeK"/>
+                            <constraint firstItem="Co6-re-Ohh" firstAttribute="leading" secondItem="Ine-VC-liJ" secondAttribute="trailing" constant="6" id="P4n-Lj-duL"/>
+                            <constraint firstItem="hu2-aM-scn" firstAttribute="leading" secondItem="w8X-rB-KcR" secondAttribute="leading" constant="20" symbolic="YES" id="T4s-xj-e9m"/>
+                            <constraint firstItem="kTQ-uJ-XMq" firstAttribute="leading" secondItem="w8X-rB-KcR" secondAttribute="leading" constant="20" symbolic="YES" id="p0s-7Q-9hT"/>
+                            <constraint firstItem="Ine-VC-liJ" firstAttribute="top" secondItem="dmn-wB-9Qt" secondAttribute="bottom" constant="80" id="t4N-AR-P6b"/>
+                            <constraint firstItem="dmn-wB-9Qt" firstAttribute="leading" secondItem="kTQ-uJ-XMq" secondAttribute="trailing" constant="23" id="ugX-ee-VLN"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="avatarImage" destination="hu2-aM-scn" id="Gmg-fw-t9i"/>
                         <outlet property="nameTextField" destination="Ine-VC-liJ" id="Ndo-Ot-2Q5"/>
-                        <outlet property="uidLabel" destination="v1z-hl-2bQ" id="KDa-bo-dTo"/>
+                        <outlet property="uidLabel" destination="rQB-RC-k4f" id="e8c-3U-slE"/>
                     </connections>
                 </viewController>
                 <customObject id="gzA-Yh-dK9" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -1026,6 +1124,7 @@ DQ
     <resources>
         <image name="NSAddTemplate" width="15" height="11"/>
         <image name="NSHomeTemplate" width="20" height="14"/>
+        <image name="NSTouchBarComposeTemplate" width="16" height="13"/>
         <image name="NSTouchBarNewMessageTemplate" width="17" height="14"/>
         <image name="NSTouchBarUserTemplate" width="15" height="12"/>
         <image name="NSUser" width="32" height="32"/>
