@@ -18,6 +18,7 @@
 		182769C32504AA6200711684 /* LCViewController+LeftSidebar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769C22504AA6200711684 /* LCViewController+LeftSidebar.swift */; };
 		182769C62504B4A000711684 /* LCUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769C52504B4A000711684 /* LCUserViewController.swift */; };
 		182769CA2504B9FB00711684 /* NSImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 182769C92504B9FB00711684 /* NSImage.swift */; };
+		18CA7E0D2512247C003827DF /* LCWindow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18CA7E0C2512247C003827DF /* LCWindow.swift */; };
 		18D24912250BA61D00594143 /* LCNewMessageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D24910250BA61D00594143 /* LCNewMessageViewController.swift */; };
 		18D24913250BA61D00594143 /* LCNewMessageViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 18D24911250BA61D00594143 /* LCNewMessageViewController.xib */; };
 		18E75E77250C8B3C00DBD5E4 /* Notification.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18E75E76250C8B3C00DBD5E4 /* Notification.swift */; };
@@ -47,6 +48,7 @@
 		182769C22504AA6200711684 /* LCViewController+LeftSidebar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "LCViewController+LeftSidebar.swift"; sourceTree = "<group>"; };
 		182769C52504B4A000711684 /* LCUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCUserViewController.swift; sourceTree = "<group>"; };
 		182769C92504B9FB00711684 /* NSImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NSImage.swift; sourceTree = "<group>"; };
+		18CA7E0C2512247C003827DF /* LCWindow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCWindow.swift; sourceTree = "<group>"; };
 		18D24910250BA61D00594143 /* LCNewMessageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LCNewMessageViewController.swift; sourceTree = "<group>"; };
 		18D24911250BA61D00594143 /* LCNewMessageViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LCNewMessageViewController.xib; sourceTree = "<group>"; };
 		18E75E76250C8B3C00DBD5E4 /* Notification.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 			children = (
 				182769A9250319C400711684 /* LCViewController.swift */,
 				18E75E78250C8BF300DBD5E4 /* LCWindowController.swift */,
+				18CA7E0C2512247C003827DF /* LCWindow.swift */,
 				182769B725031EDC00711684 /* LCViewController+NSTableView.swift */,
 				182769C22504AA6200711684 /* LCViewController+LeftSidebar.swift */,
 				182769B92503665400711684 /* LCViewController+SendMessage.swift */,
@@ -254,6 +257,7 @@
 				182769C62504B4A000711684 /* LCUserViewController.swift in Sources */,
 				182769C32504AA6200711684 /* LCViewController+LeftSidebar.swift in Sources */,
 				18F8C82C2508FB22001CCC0C /* LCChattingMessage.swift in Sources */,
+				18CA7E0D2512247C003827DF /* LCWindow.swift in Sources */,
 				182769CA2504B9FB00711684 /* NSImage.swift in Sources */,
 				182769BA2503665400711684 /* LCViewController+SendMessage.swift in Sources */,
 				18F8C8252508E7AC001CCC0C /* LCLoginViewController.swift in Sources */,

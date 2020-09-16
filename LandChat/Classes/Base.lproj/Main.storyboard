@@ -479,7 +479,7 @@
         <scene sceneID="R2V-B0-nI4">
             <objects>
                 <windowController storyboardIdentifier="Main" id="B8D-0N-5wS" customClass="LCWindowController" customModule="LandChat" customModuleProvider="target" sceneMemberID="viewController">
-                    <window key="window" title="LandChat" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA">
+                    <window key="window" title="LandChat" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO" animationBehavior="default" titlebarAppearsTransparent="YES" titleVisibility="hidden" id="IQv-IB-iLA" customClass="LCWindow" customModule="LandChat" customModuleProvider="target">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES" fullSizeContentView="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
                         <rect key="contentRect" x="196" y="240" width="600" height="450"/>
@@ -1030,10 +1030,10 @@ DQ
         <image name="NSTouchBarUserTemplate" width="15" height="12"/>
         <image name="NSUser" width="32" height="32"/>
         <namedColor name="ColorA">
-            <color red="0.72378192172408939" green="0.82351452768753952" blue="0.9963868260383606" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.72399997711181641" green="0.82400000095367432" blue="0.99599999189376831" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
         <namedColor name="ColorB">
-            <color red="0.86218177754735548" green="0.85801664818722334" blue="0.86634690690748761" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <color red="0.8619999885559082" green="0.85799998044967651" blue="0.86599999666213989" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
         </namedColor>
     </resources>
 </document>
