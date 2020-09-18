@@ -13,7 +13,7 @@ class LCChattingMessageGroup: NSObject, Codable {
     
     class func messageGroup(ofName name: String, result: @escaping (Bool, LCChattingMessageGroup?) -> (Void) ) {
         
-        let url = URL(string: "http://landchat.ericnth.cn/viewjson.php?room=\(name)")!
+        let url = URL(string: "https://landchat.ericnth.cn/viewjson.php?room=\(name)")!
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             if data != nil && error == nil {

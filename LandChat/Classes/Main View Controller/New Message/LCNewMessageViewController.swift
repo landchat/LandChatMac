@@ -29,7 +29,7 @@ class LCNewMessageViewController: NSViewController {
     
     @IBAction func sendMessage(_ sender: Any?) {
         
-        let url = URL(string: "http://landchat.ericnth.cn/addmsg.php?id=\(UserDefaults.standard.string(forKey: "LoginUserID") ?? "Unknown")&room=\(self.chatroomName.stringValue)&msg=\(self.message.string)&pwd=\(UserDefaults.standard.string(forKey: "LoginPassword") ?? "")&app_id=mE1aF6cH0jC0jC5pA0lA0cB1kE0cC5".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
+        let url = URL(string: "https://landchat.ericnth.cn/addmsg.php?id=\(UserDefaults.standard.string(forKey: "LoginUserID") ?? "Unknown")&room=\(self.chatroomName.stringValue)&msg=\(self.message.string)&pwd=\(UserDefaults.standard.string(forKey: "LoginPassword") ?? "")&app_id=mE1aF6cH0jC0jC5pA0lA0cB1kE0cC5".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             DispatchQueue.main.async {

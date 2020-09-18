@@ -6,7 +6,7 @@ The LandChat server and back-end is developed by [@EricNTH080103](https://github
 
 The macOS application is developed by [@23786](https://github.com/23786).
 
-The chat server is at [landchat.ericnth.cn](http://landchat.ericnth.cn/).
+The chat server is at [landchat.ericnth.cn](https://landchat.ericnth.cn/).
 
 ![image.png](https://i.loli.net/2020/09/13/Ec1fkbynUlMwK4H.png)
 > Screenshot of macOS Client.
@@ -21,7 +21,7 @@ The chat server is at [landchat.ericnth.cn](http://landchat.ericnth.cn/).
 - `PASSWORD`: Your password.
 
 ```text
-http://landchat.ericnth.cn/addmsg.php?id=ID&room=CHATROOMNAME&msg=MESSAGE&pwd=PASSWORD
+https://landchat.ericnth.cn/addmsg.php?id=ID&room=CHATROOMNAME&msg=MESSAGE&pwd=PASSWORD
 ```
 
 If the password is correct, 
@@ -33,14 +33,14 @@ The server will return `Succeed`.
 > Please replace `CHATROOMNAME` with your chatroom name.
 
 ```text
-http://landchat.ericnth.cn/viewjson.php?room=CHATROOMNAME
+https://landchat.ericnth.cn/viewjson.php?room=CHATROOMNAME
 ```
 The chat history is in this text file.
 
 ## Check your password
 
 ```text
-http://landchat.ericnth.cn/checkkey.php?id=YOURUSERID&pwd=YOURPASSWORD
+https://landchat.ericnth.cn/checkkey.php?id=YOURUSERID&pwd=YOURPASSWORD
 ````
 Returns a JSON result:
 - `result`: `Succeed` or `Failed`.
