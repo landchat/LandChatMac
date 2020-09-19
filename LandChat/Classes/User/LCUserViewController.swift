@@ -16,6 +16,17 @@ class LCUserViewController: NSViewController {
     @IBOutlet weak var avatarUrlLabel: NSTextField!
     @objc dynamic var isEditing = false
     
+    var allowsEditting: Bool {
+        didSet {
+            if allowsEditting {
+                self.editButton?.isHidden = false
+            } else {
+                self.editButton?.isHidden = true
+            }
+        }
+    }
+    @IBOutlet weak var editButton: NSButton!
+    
     @IBAction func editOrDone(_ sender: NSButton?) {
         self.isEditing = !isEditing
     }
@@ -23,10 +34,16 @@ class LCUserViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.nameTextField.stringValue = "Welcome, " + ( UserDefaults.standard.string(forKey: "UserName") ?? "Unknown User" )
+        self.nameTextField.stringValue = UserDefaults.standard.string(forKey: "UserName") ?? "Unknown User"
         self.uidLabel.stringValue = UserDefaults.standard.string(forKey: "LoginUserID") ?? "Unknown"
         self.emailLabel.stringValue = UserDefaults.standard.string(forKey: "UserEmail") ?? "Unknown"
         self.avatarUrlLabel.stringValue = UserDefaults.standard.string(forKey: "UserAvatarUrl") ?? "Unknown"
+        
+        if allowsEditting {
+            self.editButton?.isHidden = false
+        } else {
+            self.editButton?.isHidden = true
+        }
         
     }
     

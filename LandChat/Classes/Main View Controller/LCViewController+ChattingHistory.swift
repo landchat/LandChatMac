@@ -34,6 +34,11 @@ extension LCViewController: LCChattingMessageReceiverDelegate {
     
     func loadMessageGroup(ofName name: String) {
         
+        if self.messageReceiver == nil {
+            self.messageReceiver = LCChattingMessageReceiver(chatroomName: name)
+            self.messageReceiver.delegate = self
+            self.messageReceiver.validate()
+        }
         self.messageReceiver.chatroomName = name
         self.messageReceiver.request()
         /*

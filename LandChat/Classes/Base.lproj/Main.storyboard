@@ -1007,17 +1007,17 @@ DQ
                                 </connections>
                             </button>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ine-VC-liJ">
-                                <rect key="frame" x="114" y="302" width="136" height="21"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="Welcome, Name" id="XQ9-X6-lp3">
+                                <rect key="frame" x="114" y="302" width="52" height="21"/>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Name" id="XQ9-X6-lp3">
                                     <font key="font" metaFont="system" size="18"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hIj-QV-ZxM">
-                                <rect key="frame" x="30" y="201" width="200" height="19"/>
+                                <rect key="frame" x="30" y="201" width="172" height="19"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                <textFieldCell key="cell" lineBreakMode="clipping" title="My personal information" id="ceY-vP-vne">
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Personal information" id="ceY-vP-vne">
                                     <font key="font" metaFont="systemHeavy" size="16"/>
                                     <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                     <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -1087,7 +1087,7 @@ DQ
                                 </textFieldCell>
                             </textField>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Co6-re-Ohh">
-                                <rect key="frame" x="254" y="300" width="24" height="26"/>
+                                <rect key="frame" x="170" y="300" width="24" height="26"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="24" id="IKJ-s2-hPc"/>
                                     <constraint firstAttribute="height" constant="22" id="RKh-QI-o4U"/>
@@ -1139,6 +1139,7 @@ DQ
                     <connections>
                         <outlet property="avatarImage" destination="hu2-aM-scn" id="Gmg-fw-t9i"/>
                         <outlet property="avatarUrlLabel" destination="SqF-oc-ZDw" id="HLg-sf-HpM"/>
+                        <outlet property="editButton" destination="dmn-wB-9Qt" id="Xei-aA-vHW"/>
                         <outlet property="emailLabel" destination="rF9-vY-IGM" id="SZC-cC-xlx"/>
                         <outlet property="nameTextField" destination="Ine-VC-liJ" id="Ndo-Ot-2Q5"/>
                         <outlet property="uidLabel" destination="rQB-RC-k4f" id="e8c-3U-slE"/>

@@ -23,7 +23,7 @@ class LCViewController: NSViewController {
     
     var recentChatrooms = [String]() {
         didSet {
-            UserDefaults.standard.set(self.recentChatrooms, forKey: "RecentChatrooms")
+            UserDefaults.standard.set(self.recentChatrooms, forKey: "RecentChatrooms-\(UserDefaults.standard.string(forKey: "LoginUserID") ?? "Unknown")")
             self.tableView?.reloadData()
         }
     }
@@ -31,16 +31,7 @@ class LCViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.recentChatrooms = UserDefaults.standard.stringArray(forKey: "RecentChatrooms") ?? []
-        
-        if !self.recentChatrooms.isEmpty {
-            
-            let receiver = LCChattingMessageReceiver(chatroomName: self.recentChatrooms[0])
-            receiver.delegate = self
-            receiver.validate()
-            self.messageReceiver = receiver
-            
-        }
+        self.recentChatrooms = UserDefaults.standard.stringArray(forKey: "RecentChatrooms-\(UserDefaults.standard.string(forKey: "LoginUserID") ?? "Unknown")") ?? []
         
         
     }
