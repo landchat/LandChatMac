@@ -15,14 +15,14 @@ class LCChattingMessageReceiver: NSObject {
     
     var chatroomName: String {
         didSet {
-            self.historyResult = nil
+            self.lastFlushTime = "100001010001"
         }
     }
     
     var queue: DispatchQueue?
     var delegate: LCChattingMessageReceiverDelegate?
-    var historyResult: LCChattingMessageGroup?
     var timer: Timer?
+    var lastFlushTime: String = "100001010001"
     
     init(chatroomName: String) {
         self.chatroomName = chatroomName
@@ -32,7 +32,7 @@ class LCChattingMessageReceiver: NSObject {
     
     func validate() {
         
-        self.timer = Timer(fire: Date(), interval: 4.0, repeats: true, block: { (timer) in
+        self.timer = Timer(fire: Date(), interval: 1.0, repeats: true, block: { (timer) in
             
             self.request()
             
@@ -46,24 +46,27 @@ class LCChattingMessageReceiver: NSObject {
     
     func request() {
         
-        LCChattingMessageGroup.messageGroup(ofName: self.chatroomName) {
+        let date = Date()
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyyMMddHHmm"
+        let string = dateFormatter.string(from: date)
+        print(string)
+        let lastFlushTime = self.lastFlushTime
+        self.lastFlushTime = string
+        
+        LCChattingMessageGroup.messageGroup(ofName: self.chatroomName, flushTime: lastFlushTime) {
             (bool, result) in
             guard bool else {
+                return
+            }
+            guard result != nil else {
                 return
             }
             guard result!.messages != nil else {
                 return
             }
             self.queue?.async {
-                if self.historyResult != nil {
-                    if result!.messages!.count != self.historyResult!.messages!.count {
-                        self.historyResult = result
-                        self.delegate?.messageReceiverReceivedNewMessage(inChatroom: self.chatroomName, messageGroup: result!)
-                    }
-                } else {
-                    self.historyResult = result
-                    self.delegate?.messageReceiverReceivedNewMessage(inChatroom: self.chatroomName, messageGroup: result!)
-                }
+                self.delegate?.messageReceiverReceivedNewMessage(inChatroom: self.chatroomName, messageGroup: result!)
             }
         }
         

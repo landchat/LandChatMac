@@ -36,6 +36,8 @@ class LCUserViewController: NSViewController {
         
         self.nameTextField.stringValue = "Welcome, " + ( UserDefaults.standard.string(forKey: "UserName") ?? "Unknown User" )
         self.uidLabel.stringValue = UserDefaults.standard.string(forKey: "LoginUserID") ?? "Unknown"
+        self.emailLabel.stringValue = UserDefaults.standard.string(forKey: "UserEmail") ?? "Unknown"
+        self.avatarUrlLabel.stringValue = UserDefaults.standard.string(forKey: "UserAvatarUrl") ?? "Unknown"
         
     }
     

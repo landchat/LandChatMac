@@ -11,6 +11,9 @@ class LCLoginRequestResult: NSObject, Codable {
     
     var result: String
     var name: String
+    var registerTime: String
+    var email: String
+    var avatarUrl: String
     
     static func isPasswordRight(_ password: String, uid: Int, completionHandler: @escaping (Bool, LCLoginRequestResult?) -> (Void) ) {
         
@@ -28,6 +31,16 @@ class LCLoginRequestResult: NSObject, Codable {
             completionHandler( false, nil )
         }
         task.resume()
+        
+    }
+    
+    enum CodingKeys: String, CodingKey {
+        
+        case result = "result"
+        case name = "name"
+        case registerTime = "regitime"
+        case email = "email"
+        case avatarUrl = "profile_photo"
         
     }
     

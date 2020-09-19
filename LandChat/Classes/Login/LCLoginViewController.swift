@@ -31,6 +31,9 @@ class LCLoginViewController: NSViewController {
                     if result!.result == "CORRECT" {
                         UserDefaults.standard.set(self.passwordField.stringValue, forKey: "LoginPassword")
                         UserDefaults.standard.set(result!.name, forKey: "UserName")
+                        UserDefaults.standard.set(result!.email, forKey: "UserEmail")
+                        UserDefaults.standard.set(result!.registerTime, forKey: "UserRegisterTime")
+                        UserDefaults.standard.set(result!.avatarUrl, forKey: "UserAvatarUrl")
                         // Succeed
                         print("Welcome, \(result!.name)")
                         DispatchQueue.main.async {

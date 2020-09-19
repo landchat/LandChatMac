@@ -11,16 +11,23 @@ class LCChattingMessageGroup: NSObject, Codable {
     
     var messages: [LCChattingMessage]?
     
-    class func messageGroup(ofName name: String, result: @escaping (Bool, LCChattingMessageGroup?) -> (Void) ) {
+    class func messageGroup(ofName name: String, flushTime time: String, result: @escaping (Bool, LCChattingMessageGroup?) -> (Void) ) {
         
-        let url = URL(string: "https://landchat.ericnth.cn/viewjson.php?room=\(name)")!
+        let url = URL(string: "https://landchat.ericnth.cn/viewjson.php?room=\(name)&flushtime=\(time)")!
         let task = URLSession.shared.dataTask(with: url) {
             (data, response, error) in
             if data != nil && error == nil {
+                if let string = String(data: data!, encoding: .utf8) {
+                    if string == "Nothing-New" {
+                        result( true, nil )
+                        return
+                    }
+                }
                 do {
                     result( true, try JSONDecoder().decode(LCChattingMessageGroup.self, from: data!) )
                     return
                 } catch {
+                    result( false, nil )
                     return
                 }
             }

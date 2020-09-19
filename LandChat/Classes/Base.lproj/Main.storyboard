@@ -1112,6 +1112,8 @@ DQ
                     </view>
                     <connections>
                         <outlet property="avatarImage" destination="hu2-aM-scn" id="Gmg-fw-t9i"/>
+                        <outlet property="avatarUrlLabel" destination="SqF-oc-ZDw" id="HLg-sf-HpM"/>
+                        <outlet property="emailLabel" destination="rF9-vY-IGM" id="SZC-cC-xlx"/>
                         <outlet property="nameTextField" destination="Ine-VC-liJ" id="Ndo-Ot-2Q5"/>
                         <outlet property="uidLabel" destination="rQB-RC-k4f" id="e8c-3U-slE"/>
                     </connections>
