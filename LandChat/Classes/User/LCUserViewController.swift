@@ -20,17 +20,6 @@ class LCUserViewController: NSViewController {
         self.isEditing = !isEditing
     }
     
-    @IBAction func chooseImage(_ sender: Any?) {
-        let panel = NSOpenPanel()
-        panel.allowedFileTypes = ["jpg", "jpeg", "png"]
-        panel.beginSheetModal(for: self.view.window!) { response in
-            if response == .OK && panel.url != nil {
-                self.avatarImage.image = NSImage(contentsOf: panel.url!)?
-                    .resizeImage(to: NSMakeSize(150, 150))
-            }
-        }
-    }
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
