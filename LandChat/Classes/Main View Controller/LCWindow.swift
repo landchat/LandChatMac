@@ -8,7 +8,7 @@
 import Cocoa
 
 class LCWindow: NSWindow {
-    
+    /*
     override func becomeMain() {
         super.becomeMain()
         (self.contentViewController as! LCViewController).messageReceiver.validate()
@@ -18,5 +18,5 @@ class LCWindow: NSWindow {
         super.resignMain()
         (self.contentViewController as! LCViewController).messageReceiver.invalidate()
     }
-    
+    */
 }

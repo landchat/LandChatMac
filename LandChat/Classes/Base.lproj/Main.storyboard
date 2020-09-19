@@ -688,7 +688,7 @@
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="waC-ee-Bzj">
-                                                                                    <rect key="frame" x="1" y="31" width="35" height="15"/>
+                                                                                    <rect key="frame" x="33" y="31" width="35" height="15"/>
                                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="3WC-RS-mCG">
                                                                                         <font key="font" metaFont="cellTitle"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -696,7 +696,7 @@
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="YdJ-FH-kZW">
-                                                                                    <rect key="frame" x="3" y="8" width="92" height="16"/>
+                                                                                    <rect key="frame" x="35" y="8" width="92" height="16"/>
                                                                                     <textFieldCell key="cell" selectable="YES" title="Multiline Label" drawsBackground="YES" id="35D-Ie-nso">
                                                                                         <font key="font" metaFont="system"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -710,13 +710,26 @@
                                                                                         </userDefinedRuntimeAttribute>
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </textField>
+                                                                                <button translatesAutoresizingMaskIntoConstraints="NO" id="Nup-5F-ZUv">
+                                                                                    <rect key="frame" x="2" y="17" width="28" height="28"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="height" constant="28" id="8ga-pU-BOl"/>
+                                                                                        <constraint firstAttribute="width" constant="28" id="C1F-cu-4rw"/>
+                                                                                    </constraints>
+                                                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSUser" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="ATU-vT-BBw">
+                                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                                        <font key="font" metaFont="system"/>
+                                                                                    </buttonCell>
+                                                                                </button>
                                                                             </subviews>
                                                                             <constraints>
                                                                                 <constraint firstItem="waC-ee-Bzj" firstAttribute="top" secondItem="4h9-dn-s9O" secondAttribute="top" constant="7" id="7Tc-Zs-Tex"/>
-                                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YdJ-FH-kZW" secondAttribute="trailing" constant="89" id="8ej-oY-hT0"/>
-                                                                                <constraint firstItem="waC-ee-Bzj" firstAttribute="leading" secondItem="4h9-dn-s9O" secondAttribute="leading" constant="3" id="anA-on-AyW"/>
+                                                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="YdJ-FH-kZW" secondAttribute="trailing" constant="50" id="8ej-oY-hT0"/>
+                                                                                <constraint firstItem="waC-ee-Bzj" firstAttribute="leading" secondItem="4h9-dn-s9O" secondAttribute="leading" constant="35" id="anA-on-AyW"/>
+                                                                                <constraint firstItem="Nup-5F-ZUv" firstAttribute="top" secondItem="4h9-dn-s9O" secondAttribute="top" constant="8" id="dEZ-mX-AO2"/>
                                                                                 <constraint firstItem="YdJ-FH-kZW" firstAttribute="top" secondItem="waC-ee-Bzj" secondAttribute="bottom" constant="7" id="dqk-ZP-nXj"/>
-                                                                                <constraint firstItem="YdJ-FH-kZW" firstAttribute="leading" secondItem="4h9-dn-s9O" secondAttribute="leading" constant="3" id="vKE-2q-AFM"/>
+                                                                                <constraint firstItem="Nup-5F-ZUv" firstAttribute="leading" secondItem="4h9-dn-s9O" secondAttribute="leading" constant="2" id="jIv-Xc-7Od"/>
+                                                                                <constraint firstItem="YdJ-FH-kZW" firstAttribute="leading" secondItem="4h9-dn-s9O" secondAttribute="leading" constant="35" id="vKE-2q-AFM"/>
                                                                             </constraints>
                                                                             <connections>
                                                                                 <outlet property="message" destination="YdJ-FH-kZW" id="SAN-DZ-kn9"/>
@@ -728,7 +741,7 @@
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                             <subviews>
                                                                                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="iLX-Uj-eCx">
-                                                                                    <rect key="frame" x="256" y="22" width="35" height="15"/>
+                                                                                    <rect key="frame" x="224" y="26" width="35" height="15"/>
                                                                                     <textFieldCell key="cell" lineBreakMode="clipping" title="Label" id="tW7-9z-KMZ">
                                                                                         <font key="font" metaFont="cellTitle"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -736,7 +749,7 @@
                                                                                     </textFieldCell>
                                                                                 </textField>
                                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" translatesAutoresizingMaskIntoConstraints="NO" id="C5K-jt-FS4">
-                                                                                    <rect key="frame" x="197" y="-1" width="92" height="16"/>
+                                                                                    <rect key="frame" x="165" y="3" width="92" height="16"/>
                                                                                     <textFieldCell key="cell" selectable="YES" title="Multiline Label" drawsBackground="YES" id="97u-bX-GIl">
                                                                                         <font key="font" metaFont="system"/>
                                                                                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -750,13 +763,26 @@
                                                                                         </userDefinedRuntimeAttribute>
                                                                                     </userDefinedRuntimeAttributes>
                                                                                 </textField>
+                                                                                <button translatesAutoresizingMaskIntoConstraints="NO" id="g7j-3c-dY5">
+                                                                                    <rect key="frame" x="262" y="8" width="28" height="28"/>
+                                                                                    <constraints>
+                                                                                        <constraint firstAttribute="width" constant="28" id="YQr-eG-sld"/>
+                                                                                        <constraint firstAttribute="height" constant="28" id="tSC-Gk-6z9"/>
+                                                                                    </constraints>
+                                                                                    <buttonCell key="cell" type="square" bezelStyle="shadowlessSquare" image="NSUser" imagePosition="only" alignment="center" imageScaling="proportionallyUpOrDown" inset="2" id="cDE-kF-s0c">
+                                                                                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                                                                        <font key="font" metaFont="system"/>
+                                                                                    </buttonCell>
+                                                                                </button>
                                                                             </subviews>
                                                                             <constraints>
+                                                                                <constraint firstItem="C5K-jt-FS4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gc9-Q8-XRi" secondAttribute="leading" constant="50" id="1Mt-qU-cM8"/>
                                                                                 <constraint firstItem="C5K-jt-FS4" firstAttribute="top" secondItem="iLX-Uj-eCx" secondAttribute="bottom" constant="7" id="91L-u7-xfB"/>
-                                                                                <constraint firstAttribute="trailing" secondItem="iLX-Uj-eCx" secondAttribute="trailing" constant="3" id="KfY-1m-Lfz"/>
-                                                                                <constraint firstItem="iLX-Uj-eCx" firstAttribute="top" secondItem="Gc9-Q8-XRi" secondAttribute="top" constant="7" id="S3f-3n-Dau"/>
-                                                                                <constraint firstAttribute="trailing" secondItem="C5K-jt-FS4" secondAttribute="trailing" constant="3" id="ZSf-ph-C5t"/>
-                                                                                <constraint firstItem="C5K-jt-FS4" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Gc9-Q8-XRi" secondAttribute="leading" constant="89" id="yab-OV-0xc"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="iLX-Uj-eCx" secondAttribute="trailing" constant="35" id="KfY-1m-Lfz"/>
+                                                                                <constraint firstItem="iLX-Uj-eCx" firstAttribute="top" secondItem="Gc9-Q8-XRi" secondAttribute="top" constant="3" id="S3f-3n-Dau"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="g7j-3c-dY5" secondAttribute="trailing" constant="2" id="YaD-qP-QZk"/>
+                                                                                <constraint firstAttribute="trailing" secondItem="C5K-jt-FS4" secondAttribute="trailing" constant="35" id="ZSf-ph-C5t"/>
+                                                                                <constraint firstItem="g7j-3c-dY5" firstAttribute="top" secondItem="Gc9-Q8-XRi" secondAttribute="top" constant="8" id="r3y-9m-Kse"/>
                                                                             </constraints>
                                                                             <connections>
                                                                                 <outlet property="message" destination="C5K-jt-FS4" id="S1v-va-fYQ"/>
